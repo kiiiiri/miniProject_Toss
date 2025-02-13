@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>토스 고객센터</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100vw;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100vw; /* 뷰포트 너비 전체 */
+      max-width: 100vw;
+      padding: 0;
+      margin: 0;
+    }
+
+    #help {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+      width: 100%;
+    }
+
+    .section {
+      padding: 40px 0;
+      margin-bottom: 20px;
+      min-width: 100px;
+    }
+
+    .section2 {
+      background-color: #d4f7c9;
+      width: 100%; 
+      padding: 40px 0;
+    }
+
+    .section2 .content {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .row {
+      margin: 0 !important; /* Bootstrap 기본 마진 제거 */
+      padding: 0 !important;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- 무엇을 도와드릴까요? -->
+    <div id="help">
+      <img src="img/toss_customer.png" alt="Toss Customer" class="img-fluid">
+      <h2>무엇을 도와드릴까요?</h2>
+      <input type="text" class="form-control search-input" placeholder="검색어를 입력하세요" aria-label="Search">
+    </div>
+
+    <!-- 고객센터 안내 -->
+    <div class="section section2">
+      <div class="content">
+        <h2>토스 고객센터에서<br> 24시간 상담받을 수 있어요.</h2>
+        <div class="row">
+          <div class="col" style="border-right: 2px solid #ccc; padding-right: 20px; margin-right: 20px;">
+            <p>일반 상담</p>
+            <p>1599-4905</p>
+          </div>
+          <div class="col">
+            <p>피해・사기 상담</p>
+            <p>1661-4905</p>
+          </div>
+        </div>
+        <img src="img/toss_tell.png" alt="상담 이미지" class="img-fluid" style="width: 500px; height: 400px; object-fit: cover; object-position: top;">
+      </div>
+    </div>
+
+    <!-- 추가 섹션 -->
+    <div class="section section3">
+      <h2>섹션 3</h2>
+      <p>여기에 세 번째 섹션의 내용을 추가하세요.</p>
+    </div>
+
+    <div class="section section4">
+      <h2>섹션 4</h2>
+      <p>여기에 네 번째 섹션의 내용을 추가하세요.</p>
+    </div>
+
+    <div class="section section5">
+      <h2>섹션 5</h2>
+      <p>여기에 다섯 번째 섹션의 내용을 추가하세요.</p>
+    </div>
+  </div>
+
+  <!-- footer.js에서 footer 파일을 불러오기 위한 스크립트 -->
+  <script>
+    fetch('/footer/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.body.insertAdjacentHTML('beforeend', data);
+      });
+  </script>
+
+</body>
+</html>
