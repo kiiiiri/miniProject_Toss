@@ -1,0 +1,76 @@
+
+.navbar {
+  background-color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: black;
+}
+.navbar a {
+  color: black;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+/* 고정된 상단바 */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 왼쪽과 오른쪽에 요소들을 배치 */
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* 아이콘 */
+.header .logo {
+  margin-right: 10px;
+  font-size: 24px;
+  display: flex;
+  align-items: center; /* 아이콘과 텍스트가 수평으로 정렬되도록 */
+}
+.header .favicon {
+  width: 16px; /* 파비콘 크기 16px로 설정 */
+  height: 16px; /* 높이도 16px로 맞춤 */
+  margin-right: 8px; /* 텍스트와 아이콘 간 간격 */
+}
+
+/* 텍스트 */
+.header .title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 링크들 */
+.header .links {
+  display: flex;
+  gap: 20px; /* 링크들 간의 간격 */
+}
+
+.header .links a {
+  text-decoration: none; /* 밑줄 제거 */
+  color: #333; /* 링크 색상 */
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s; /* 색상 전환 효과 */
+}
+
+/* 링크 hover 효과 */
+.header .links a:hover {
+  color: #007bff; /* hover 시 색상 변화 */
+}
+
+/* 본문이 상단바와 겹치지 않도록 여백 추가 */
+body {
+  margin-top: 50px;
+}
