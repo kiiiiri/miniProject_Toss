@@ -74,3 +74,111 @@
 body {
   margin-top: 50px;
 }
+a {
+  text-decoration: none; /* 기본적으로 밑줄 제거 */
+  color: #6c757d; /* 기본 색상 */
+}
+
+a:hover {
+  text-decoration: underline; /* hover 시 밑줄 추가 */
+  color: #0056B3 !important; /* hover 시 파란색으로 변경 */
+}
+    .bg-light {
+      background-color: #F9FAFB !important;
+    }
+
+    h5 {
+      font-weight: bold;
+    }
+
+    #info {
+      text-align: left;
+      font-size: 14px;
+    }
+
+    .footer-links {
+    display: grid;
+     grid-template-columns: repeat(4, calc(20% - 15px)); /* 각 항목의 너비(width)를 20%에서 간격(15px)만큼 빼기 */
+    gap: 7px; /* 행 간격 유지 */
+    margin-top: 20px;
+    font-size: small;
+    }
+
+    .footer-links a {
+      color: #6c757d;
+    }
+
+    .text-muted {
+  margin-top: 10px;
+    }
+
+    ul.list-unstyled li {
+  margin-bottom: 5px; /*각 li(링크) 하단 여백 5px 추가*/
+}
+
+@media (max-width: 768px) {
+  .footer-links {
+    grid-template-columns: 1fr; /* 작은 화면에서는 1개씩 보이게 설정 */
+  }
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+.container1 {
+  width: 60%;
+  margin: 50px auto;
+}
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.search-box {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #f5f5f5;
+}
+.sidebar {
+  float: left;
+  width: 20%;
+  font-size: 14px;
+}
+.sidebar div {
+  margin: 10px 0;
+  color: #666;
+}
+.faq-content {
+  float: right;
+  width: 75%;
+}
+.faq-item {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+.faq-item i {
+  margin-right: 10px;
+  color: #999;
+}
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+.pagination span {
+  padding: 5px 10px;
+  margin: 0 3px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+.pagination span.active {
+  background-color: #0073e6;
+  color: white;
+}
