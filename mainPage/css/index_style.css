@@ -1,27 +1,60 @@
 /* Reset CSS */
-* { margin: 0; padding: 0;}
+* {margin: 0; padding: 0;}
 ol,ul { list-style: none; }
 a {text-decoration: none;}
 
+
 /* navigation bar */
-.toss_navbar{width: 100%; height: 60px;}
-.nav_container{display: flex; width: 80%; height: 100%; margin: auto;}
-.nav_innercontainer{display: flex; height: 100%; margin: 0 auto;}
+.toss_nav{width: 100%; height: 60px; position: fixed; display: flex; align-items: center; justify-content: center; background: white; z-index: 1;}
+.toss_navmenu{width: 90%; margin: auto; height: 100%;}
+.toss_navmenu_inner{display: flex; justify-content: center; align-items: center; height: 100%; }
+
 
 /* logo */
-.tosslogo_container{display: flex; align-items: center; margin-right: 24px;}
-.tosslogo_container img{width: 30px; height: 30px;}
-.tosslogo_container p{margin: 0;}
-
-/* main menu bar */
-.toss_mainmenu ul{display: flex; flex: 1; max-height: 100%; justify-content: space-between;}
-
-/* language bar */
-.language_container{display: flex;}
+.toss_logo_container{display: flex; justify-content: center; align-items: center; margin-right: 24px;}
+.toss_logo_container img{width: 30px; height: 30px;}
 
 
+/* mobile menu */
+.toss_mobile_menu{display: flex;  align-items: center;}
+#toss_app{background-color: #2471E6; border: none; border-radius: 15px; width: 76px; height: 30px; font-size: 12px; font-weight: 500; color: white; margin-right: 12px; cursor: pointer;}
+#toss_mobile_btn{display: flex; flex-direction: column; justify-content: space-between; width: 24px; height: 24px; border: none; background: transparent;  cursor: pointer; }
+#toss_mobile_btn .bar{width: 100%; height: 1px; background-color: rgb(176, 184, 193); border-radius: 2px;}
 
 
+/* main menu */
+.toss_menu_container ul{display: flex; align-items: center;}
+.toss_menu_container ul li{padding: 0 10px;} 
+.toss_menu_container ul li a{padding: 12px 10px; font-size: 15px; white-space: nowrap;}
+
+
+
+/* language menu */
+.toss_language{display: flex; align-items: center;}
+.toss_language>li>#kor{margin-left: 44px;}
+
+
+
+/* main */
+/* section 01 */
+.section01{position: relative; width: 100%; overflow: hidden;}
+.mainsec{position: relative;}
+.tossimg_main{width: auto; height: 100vh;}
+.tossimg_main>img{object-fit: cover; width: 100%; height: 100%; z-index: -1;}
+
+
+
+/* main image gradient */
+.tossimg_main::before{content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 55%; background: linear-gradient(to bottom, white, transparent);}
+
+/* section 01-01 */
+.toss_sectext01{position: absolute; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; top: 0; left: 0;}
+.toss_sectext01_01{width: 100%; margin-top: 170px; display: flex; align-items: center; flex-direction: column; justify-content: center;}
+.toss_sectext01_01>h1{text-align: center; margin-bottom: 50px; font-size: 66px; font-weight: 700;  word-break: keep-all; white-space: pre-line;}
+
+/* store button */
+.toss_storebtn a img{width: 24px;}
+.storebtn{display: inline-flex; justify-content: center; align-items: center; cursor: pointer;}
 
 
 /* footer */

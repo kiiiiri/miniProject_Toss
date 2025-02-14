@@ -9,44 +9,88 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <div id="main">
+  <div class="toss_main">
 
-        <nav class="toss_navbar">
-          <div class="nav_container">
-            <div class="nav_innercontainer">
+    <nav class="toss_nav">
 
-              <!---------------------- logo --------------------->
-              <div class="tosslogo_container">
-                <img src="img/toss.png" alt="토스 로고">
-                <p>toss</p>
-              </div>
+        <div class="toss_navmenu">
 
-              <!----------------- main menu bar ---------------------->
-              <div class="toss_mainmenu">
-                <ul>
-                  <li><a href="#">회사 소개</a></li>
-                  <li><a href="#">공지사항</a></li>
-                  <li><a href="#">고객센터</a></li>
-                  <li><a href="#">자주 묻는 질문</a></li>
-                  <li><a href="#">토스인증서</a></li>
-                  <li><a href="#">채용</a></li>
+            <div class="toss_navmenu_inner">
 
-                  <div class="language_container">
-                    <li><a href="index.html">KOR</a></li>
-                    <span>|</span>
-                    <li><a href="#">ENG</a></li>
-                  </div>
-                </ul>
-              </div>
+                <div class="toss_logo_container">
+                    <img src="img/toss.png" alt="toss logo">
+                    <p>toss</p>
+                </div>
+
+                <div class="toss_mobile_menu">
+                    <button id="toss_app">앱 다운로드</button>
+                    <button id="toss_mobile_btn">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+
+                <div class="toss_menu_container">
+                    <ul>
+                        <li><a href="#">회사 소개</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">자주 묻는 질문</a></li>
+                        <li><a href="#">토스인증서</a></li>
+                        <li><a href="#">채용</a></li>
+                        
+                        <div class="toss_language">
+                            <li><a href="#" id="kor">KOR</a></li>
+                            <span>|</span>
+                            <li><a href="#">ENG</a></li>
+                        </div>
+
+                    </ul>
+
+                </div>
 
             </div>
-          </div>
-        </nav>
+        </div>
+    </nav>
+    <main class="toss_mainsec">
 
+        <section class="section01">
 
-        <main>
-          
-        </main>
+            <div class="mainsec">
+
+                <div class="tossimg_main">
+                    <img src="img/new_main.png">
+                </div>
+
+                <div class="toss_sectext01">
+                    <div class="toss_sectext01_01">
+                        <h1>금융의 모든 것 
+                            토스에서 쉽고 간편하게
+                        </h1>
+
+                        <div class="toss_storebtn">
+                            <a href="#" class="storebtn"><img src="img/applekorea.png">App Store</a>
+                            <a href="#" class="storebtn"><img src="img/googleplay.png">Google Play</a>
+                        </div>
+                    </div>
+                    <button>응애</button>
+
+                </div>
+            </div>
+
+            <div>
+                <p>내 모든 금융 내역을 한눈에 조회하고 한 곳에서 관리하세요. 
+                    이제껏 경험 못 했던 쉽고 편리한 금융 서비스, 
+                    토스와 함께라면 당신의 일상이 새로워질 거예요.
+                </p>
+            </div>
+        </section>
+        <section>
+            <h1>section 2</h1>
+        </section>
+    </main>
+
         <footer class="bg-light text-dark py-4">
 
             <!-- 상단 설명 -->
