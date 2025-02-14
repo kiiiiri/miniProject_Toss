@@ -8,7 +8,7 @@
    
 2.작업 중간중간 git add . -> git commit -m"" 을 해줘야 혹시 모를 상황에 되돌릴 수 있음.
  - 전체 작업이 끝났다면 git add . -> git commit -m"왼쪽 메뉴 개발 완료" -> git push 이 순서대로 명령어 입력.
- - push가 성공적으로 되면 merge 후 그 브랜치는 사라지기 때문에 새로운 브랜치를 만들거나 main브랜치에서 작업 시작
+ - push가 성공적으로 되면 merge 후 그 브랜치는 사라지기 때문에 main브랜치로 이동
  - git checkout origin/main 입력 시 main branch로 이동 후 pull 필수
 
 
