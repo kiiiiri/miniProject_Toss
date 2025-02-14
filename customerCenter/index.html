@@ -9,12 +9,22 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-            flex-direction: column;
-                 height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100vw;
+      height: 100%;
       margin: 0;
       padding: 0;
        }
 
+    .container {
+      width: 100vw; /* 뷰포트 너비 전체 */
+      max-width: 100vw;
+      padding: 0;
+      margin: 0;
+    }
 
     #help {
       display: flex;
@@ -23,21 +33,18 @@
       align-items: center;
       text-align: center;
       padding: 40px;
-           }
+      width: 100%;
+    }
 
+   
     .section2 {
-  background-color: #d4f7c9;
-  width: 100vw;  /* 뷰포트 전체 너비 */
-  padding: 40px 0;
-  margin: 0;
-  }
+      background-color: #d4f7c9;
+      width: 100%; 
+      padding: 40px 0;
+      margin: 0;
+    }
 
-  .section2 .content {
-  max-width: 1200px; /* 원하는 최대 너비 */
-  margin: 0 auto; /* 가운데 정렬 */
-  padding: 0 20px; /* 좌우 여백 추가 */
-}
-
+   
   </style>
 </head>
 <body>
