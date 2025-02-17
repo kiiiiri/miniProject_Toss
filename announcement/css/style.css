@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  border: none !important;
+  background-color: white !important;
+  box-shadow: none !important;
+}
+
+nav > .container {
+  background-color: white;
+}
+
+nav img {
+  margin-top: 22px;
+  margin-left: 80px;
+  width: 82px;
+}
+
+#myNavbar {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.navbar-toggle {
+  display: block !important;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  background-color: #848484;
+  border-radius: 10px;
+  border-collapse: 10px;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .navbar-toggle {
+    display: none !important;
+  }
+}
+
+
+
+
