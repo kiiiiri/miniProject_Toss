@@ -59,7 +59,8 @@ nav img {
 }
 
 .date {
-  margin-top: 0;
+  margin-top: -10px;
+  margin-bottom: 25px;
   color: #848484;
   font-weight: 400;
 }
