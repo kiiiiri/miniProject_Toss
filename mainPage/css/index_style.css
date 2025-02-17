@@ -1,7 +1,9 @@
-/* Reset CSS */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
 * {margin: 0; padding: 0;}
 ol,ul { list-style: none; }
 a {text-decoration: none;}
+p,a,h1,h2,h3,h4,h5,h6{font-family: Pretendard;}
 
 
 /* navigation bar */
@@ -13,10 +15,11 @@ a {text-decoration: none;}
 /* logo */
 .toss_logo_container{display: flex; justify-content: center; align-items: center; margin-right: 24px;}
 .toss_logo_container img{width: 30px; height: 30px;}
+.toss_logo_container p{font-weight: 700; font-size: 20px;}
 
 
 /* mobile menu */
-.toss_mobile_menu{display: flex;  align-items: center;}
+.toss_mobile_menu{display: flex;  align-items: center; visibility: hidden; } /* visibility:hidden = 버튼 투명화*/
 #toss_app{background-color: #2471E6; border: none; border-radius: 15px; width: 76px; height: 30px; font-size: 12px; font-weight: 500; color: white; margin-right: 12px; cursor: pointer;}
 #toss_mobile_btn{display: flex; flex-direction: column; justify-content: space-between; width: 24px; height: 24px; border: none; background: transparent;  cursor: pointer; }
 #toss_mobile_btn .bar{width: 100%; height: 1px; background-color: rgb(176, 184, 193); border-radius: 2px;}
@@ -42,10 +45,9 @@ a {text-decoration: none;}
 .tossimg_main{width: auto; height: 100vh;}
 .tossimg_main>img{object-fit: cover; width: 100%; height: 100%; z-index: -1;}
 
-
-
 /* main image gradient */
-.tossimg_main::before{content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 55%; background: linear-gradient(to bottom, white, transparent);}
+.tossimg_main::before{content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 55%; background: linear-gradient(to bottom, white,  transparent);}
+
 
 /* section 01-01 */
 .toss_sectext01{position: absolute; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; top: 0; left: 0;}
@@ -53,10 +55,18 @@ a {text-decoration: none;}
 .toss_sectext01_01>h1{text-align: center; margin-bottom: 50px; font-size: 66px; font-weight: 700;  word-break: keep-all; white-space: pre-line;}
 
 /* store button */
-.toss_storebtn a img{width: 24px;}
-.storebtn{display: inline-flex; justify-content: center; align-items: center; cursor: pointer;}
+.storebtn{display: inline-flex; justify-content: center; align-items: center; cursor: pointer; background:rgba(0, 12, 30, 0.8); border-radius: 10px; color: white; padding: 11px 22px;}
+.storebtn img{width: 24px; margin-right: 6px;}
+.storebtn:hover{background-color: rgb(86, 89, 104); transition: 0.5s;}
+
+.toss_sectext01 button{border: none; background: transparent; margin-bottom: 30px; cursor: pointer; }
+.toss_sectext01 button i{font-size: 50px; color: rgba(148, 146, 146, 0.637); }
 
 
+/* section 01_02 */
+
+.toss_section01_02{position: relative; padding: 200px 0; align-items: center; justify-content: center; background-color: #F9FAFB;}
+.toss_section01_02 p{font-size: 30px; white-space: pre-line; text-align: center; margin-bottom: 50px;}
 /* footer */
 a {
     text-decoration: none; /* 기본적으로 밑줄 제거 */
