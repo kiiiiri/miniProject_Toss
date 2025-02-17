@@ -79,7 +79,7 @@ p,a,h1,h2,h3,h4,h5,h6{font-family: Pretendard; line-height: 1.3;}
 
 
 /* section 02 */
-.section02_container{ width: 100%; height: 1800px; padding: 250px 0 165px 0; max-width: 1140px; margin: 0 auto;}
+.section02_container{ width: 100%; height: 1650px; padding: 250px 0 165px 0; max-width: 1140px; margin: 0 auto;}
 
 /* section 02_01 text */
 .section02_01{position: relative;}
