@@ -3,6 +3,7 @@
   margin: 0;
 }
 
+
 .navbar {
   border: none !important;
   background-color: white !important;
@@ -15,7 +16,7 @@ nav > .container {
 
 nav img {
   margin-top: 22px;
-  margin-left: 80px;
+  margin-left: 40px;
   width: 82px;
 }
 
@@ -33,6 +34,39 @@ nav img {
   border-radius: 10px;
   border-collapse: 10px;
   color: white;
+}
+
+#mainTitle {
+  padding-top: 70px;
+  padding-left: 40px;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+#list {
+  margin-top: 70px;
+  padding-left: 40px;
+}
+
+.notice-content {
+  margin-bottom: 0;
+  font-weight: 700;
+  color: #454545;
+}
+
+.date {
+  margin-top: 0;
+  margin-bottom: 40px;
+  color: #848484;
+  font-weight: 400;
+}
+
+.notice-list {
+  list-style: none;
+}
+
+.custom-pagination {
+  margin-left: 60px;
 }
 
 @media (min-width: 768px) {
