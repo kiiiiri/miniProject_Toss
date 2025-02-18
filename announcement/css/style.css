@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+.pagination .active {
+  color: red;
+}
+
 .navbar {
   border: none !important;
   background-color: white !important;
