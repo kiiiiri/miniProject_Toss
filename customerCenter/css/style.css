@@ -43,12 +43,9 @@ body .btn.btn_custom {
   background-color: #f0f0f0;
   color: #333;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
   height: 100%;
-  width: 100%;
+  width: auto;
   margin: 5px 0;
   padding: 0;
   font-size: 14px;
@@ -92,6 +89,11 @@ body .search_input {
   display: block;
 }
 
+.bold{
+  font-weight: bold;
+  text-align: center;
+}
+
 /* 고객센터 안내 */
 .customer{
   max-height: 300px;
@@ -99,7 +101,26 @@ body .search_input {
 
 .customer .contact_info {
   display: flex;  /* 전화번호 가로정렬 */
+  flex-direction: row; /* 가로로 배치 */
+  text-align: center;
   }
+
+  .contact_info .col-6 {
+    width: auto;
+    position: relative; /* 가상 요소를 부모에 상대적으로 배치할 수 있도록 설정 */
+    text-align: center;
+    font-size: large;
+    padding: 0px 10px; /* 구분선과 항목 사이에 여백 추가 */
+    margin: 30px;
+  }
+ 
+.contact_info .col-6:not(:last-child) {
+  border-right: 1px solid #ccc; /* 마지막 항목을 제외한 항목들에 구분선 추가 */
+}
+
+.contact_info .col-6:first-child {
+  padding-right: 50px; /* 마지막 항목의 오른쪽 여백을 없앰 */
+}
 
 .customer img {
   width: 400px;
