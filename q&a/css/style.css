@@ -10,21 +10,29 @@ body {
   left: 0;
   width: 100%;
   background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 3px rgba(0, 0, 0, 0.1);
   padding: 10px 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
+  padding: 8px 20px !important; /* 위아래 패딩 줄이기 */
+  height: 60px; /* 네비게이션 높이 조정 */
 }
+.navbar-header {
+  margin-top: 5px;
+}
+
 .navbar .logo {
   font-size: 18px;
   font-weight: bold;
   color: #333;
+  margin-right: 310px;
 }
 .navbar .nav-links {
   display: flex;
-  gap: 20px;
+  padding: 8px 15px !important; /* 메뉴 간격 줄이기 */
+  gap: 30px;
 }
 .navbar .nav-links a {
   text-decoration: none;
@@ -33,7 +41,7 @@ body {
   
 }
 .navbar .nav-links a:hover {
-  color: #000;
+  color: black;
 }
 .content {
   padding-top: 120px;
@@ -116,17 +124,21 @@ h1 {
 .search-box {
     border: none;
     font-size: 30px;
-    color: #333;
+    color: rgb(228, 225, 225);
     width: 100%;
     outline: none;
     background: none;
     padding-left: 45px; /* 아이콘과 텍스트 간격 확보 */
 }
+.search-box::placeholder {
+  color: rgb(189, 189, 194); /* 원하는 색상으로 변경 */
+  opacity: 1; /* 투명도를 조정 (기본값은 0.5~0.7 정도) */
+}
 
 .search-icon {
     position: absolute;
     left: 10px; /* 왼쪽 정렬 */
-    color: #c9c3c3; /* 아이콘 색상 */
+    color: #e0dede; /* 아이콘 색상 */
     font-size: 28px;
 }
 
