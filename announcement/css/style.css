@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+.pagination .active {
+  color: red;
+}
+
 .navbar {
   border: none !important;
   background-color: white !important;
@@ -72,6 +76,12 @@ nav img {
 .custom-pagination {
   margin-left: 35px;
 }
+
+button.disabled {
+  cursor: not-allowed !important; 
+  pointer-events: none; 
+}
+
 
 .custom-pagination li a {
   margin: 5px 5px;
