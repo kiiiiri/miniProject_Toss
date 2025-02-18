@@ -5,8 +5,7 @@ $(document).ready(async function() {
   let jsonData = await response.json();
 
   clearNoticeList()
-
-  console.log(jsonData.count);
+  
   for (let i = 1; i <= jsonData.count; i++) {
     if (i === 1) {
       $(".pagination").append(`<li class="prev"><button class="btn prev_btn"><</button></li>`)
