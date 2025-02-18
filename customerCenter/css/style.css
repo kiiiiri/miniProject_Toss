@@ -1,44 +1,46 @@
 body {
   font-family: Arial, sans-serif;
   height: 100%;
-     }
+}
+
 /* 섹션 스타일 */
 .section {
-margin: 40px 0; /* 위아래 여백 40px */
-padding: 40px 0;
-max-width: 800px; /* 최대 너비 제한 */
-width: 100%; /* 부모 요소에 맞추되 최대값을 넘지 않음 */
-text-align: center;
-display: flex;
-align-items: center;
-justify-content: start;
-flex-direction: column;
-max-width: none;
-}
-/* .help {
-     
-             } */
+  margin: 40px 0;
+  padding: 40px 0;
+   width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+} 
 
 .customer {
   background-color: #EEF6F3;
-           }
-
-.report {
-      text-align: left;
 }
 
+
 .compensation {
-       background-color: #F5F6F8;
-              flex-direction: row;
-       justify-content: center
-    }
+  background-color: #F5F6F8;
+  flex-direction: row;
+  justify-content: center;
+}
 
+/* 제목 스타일 */
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+p {
+  margin-bottom: 20px;
+  text-align: left;
+}
 /* 버튼 스타일 */
-
-
-.btn-custom {
+body .btn.btn_custom {
   background-color: #f0f0f0;
-  border-color: #ccc;
   color: #333;
   display: flex;
   flex-direction: column;
@@ -46,32 +48,92 @@ max-width: none;
   justify-content: center;
   text-align: center;
   height: 100%;
-  width: 100%;        /* 버튼 너비 */
-  margin: 10px 0px;
-  font-size: 14px;  
-  min-width: 120px;
-}
+  width: 100%;
+  margin: 5px 0;
+  padding: 0;
+  font-size: 14px;
+ }
 
-.btn-custom:hover {
+body .btn.btn_custom:hover {
   background-color: #e0e0e0;
   border-color: #bbb;
 }
-.btn-custom svg {
+
+body .btn_custom svg {
   width: 28px;
   height: 28px;
   margin-bottom: 5px;
 }
-       .col {
-  margin: 5px;
+/* 이미지 컨테이너 */
+.img_container {
+  display: flex;
+  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: center; /* 양쪽에 배치 */
+  flex-direction: row; /* 이미지를 오른쪽으로 배치 */
 }
 
-   /* 제목 여백,폰트 크기,볼드,왼쪽정렬 */
-  h2 {
-       font-size: 28px;
-  font-weight: bold;
-  text-align: left;
-  margin-top: 40px;
-  margin-bottom: 20px;
-   }
+.img_container img {
+   object-fit: cover; /* 이미지가 잘리지 않도록 설정 */
+}
 
+/* 무엇을 도와드릴까요? */
+.help img {
+  width: 100px;
+}
+
+.help h1 {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+body .search_input {
+  max-width: 500px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* 고객센터 안내 */
+.customer{
+  max-height: 300px;
+}
+
+.customer .contact_info {
+  display: flex;  /* 전화번호 가로정렬 */
+  }
+
+.customer img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* 피해 신고하기 */
+.report{
+ padding: 30px 0;
+}
+.report h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
   
+}
+.report .row {
+  max-width: 740px; /* 최대 너비 설정 */
+  margin: 0 auto; /* 중앙 정렬 */
+}
+
+/* 토스 안심보상제 */
+.compensation {
+  display: flex;
+   margin-top: 40px;
+}
+
+.compensation h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* 안심보상 이미지 */
+.compensation img {
+  width: 400px;
+}
