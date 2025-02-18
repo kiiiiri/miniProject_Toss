@@ -11,7 +11,7 @@ body {
   width: 100%;
   background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 15px 80px;
+  padding: 10px 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,6 +30,7 @@ body {
   text-decoration: none;
   color: #666;
   font-size: 14px;
+  
 }
 .navbar .nav-links a:hover {
   color: #000;
@@ -92,15 +93,16 @@ body {
   background-color: #fff;
 }
 .container {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 50px auto;
-  padding: 20px;
+  padding: 40px;
 }
 h1 {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
   color: #333;
-  margin-top:50px;
+  margin-top: 50px;
+  margin-bottom:30px;
 }
 .search-box-container {
     display: flex;
@@ -113,19 +115,19 @@ h1 {
 
 .search-box {
     border: none;
-    font-size: 18px;
+    font-size: 30px;
     color: #333;
     width: 100%;
     outline: none;
     background: none;
-    padding-left: 35px; /* 아이콘과 텍스트 간격 확보 */
+    padding-left: 45px; /* 아이콘과 텍스트 간격 확보 */
 }
 
 .search-icon {
     position: absolute;
     left: 10px; /* 왼쪽 정렬 */
-    color: #bbb; /* 아이콘 색상 */
-    font-size: 18px;
+    color: #c9c3c3; /* 아이콘 색상 */
+    font-size: 28px;
 }
 
 .category-list {
