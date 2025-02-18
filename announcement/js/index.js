@@ -1,30 +1,30 @@
 $(document).ready(async function() {
-  let curPageNumber = 0;
+  let curPageNumber = 1;
 
   let response = await fetch("/data/announce.json"); 
   let jsonData = await response.json();
 
   console.log("JSON 데이터 확인:", jsonData); 
 
-  $(".notice-list").empty();
+  clearNoticeList()
 
   console.log(jsonData.count);
   for (let i = 1; i <= jsonData.count; i++) {
     if (i === 1) {
-      $(".pagination").append(`<li class="prev"><button class="prev_btn"><</button></li>`)
+      $(".pagination").append(`<li class="prev"><button class="btn prev_btn"><</button></li>`)
     }
 
     $(".pagination").append(`<li class=${i === 1 ? 'active' : ''}><button class="btn page_btn" id="page${i}">${i}</button></li>`)
 
     if (i === jsonData.count) {
-      $(".pagination").append(`<li class="next"><button class="next_btn">></button></li>`)
+      $(".pagination").append(`<li class="next"><button class="btn next_btn">></button></li>`)
     }
   }
 
   applyContentData(1);
 
   $(".page_btn").on("click", function() {
-    $(".notice-list").empty();
+    clearNoticeList()
 
     let pageNumber = $(this).text();
     curPageNumber = pageNumber;
@@ -38,7 +38,7 @@ $(document).ready(async function() {
   })
 
   $(".prev_btn").on("click", function() {
-    $(".notice-list").empty();
+    clearNoticeList()
     applyContentData(--curPageNumber);
     updatePaginationButton(curPageNumber);
 
@@ -47,13 +47,17 @@ $(document).ready(async function() {
   })
 
   $(".next_btn").on("click", function() {
-    $(".notice-list").empty();
+    clearNoticeList()
     applyContentData(++curPageNumber);
     updatePaginationButton(curPageNumber);
 
     $(".pagination li").removeClass("active");
     $("#page"+curPageNumber).parent().addClass("active");
   })
+
+  function clearNoticeList() {
+    $(".notice-list").empty();
+  }
 
   function applyContentData(pageNumber) {
     let pageKey = `page${pageNumber}`;
