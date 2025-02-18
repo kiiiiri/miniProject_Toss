@@ -1,6 +1,5 @@
 body {
   font-family: Arial, sans-serif;
-  height: 100%;
 }
 
 /* 섹션 스타일 */
@@ -27,6 +26,10 @@ body {
 }
 
 /* 제목 스타일 */
+body div h1 {
+  font-weight: bold;
+  font-size:xx-large;
+ }
 h2 {
   font-size: 28px;
   font-weight: bold;
@@ -42,11 +45,11 @@ p {
 body .btn.btn_custom {
   background-color: #f0f0f0;
   color: #333;
-  text-align: center;
   margin: 5px 20px;
   padding: 10px 20px;
   font-size: 14px;
   width: 100%;
+  transition: all 0.2s ease; 
  }
 
 body .btn.btn_custom:hover {
@@ -59,9 +62,21 @@ body .btn_custom svg {
   height: 28px;
   margin-bottom: 5px;
 }
-.section .btn_short{
-  width: 10px ;
+#btn_more {
+  width: 110px;
+  margin: 0px;
+  float: left;
 }
+
+/* 검색창 스타일 */
+body .input-group{
+width: 35%;
+padding-top: 20px;
+}
+body .search_input{
+padding: 20px;
+}
+
 /* 이미지 컨테이너 */
 .img_container {
   display: flex;
@@ -79,17 +94,8 @@ body .btn_custom svg {
   width: 100px;
 }
 
-.help h1 {
-  font-size: 2rem;
-  margin: 20px 0;
-}
 
-body .search_input {
-  max-width: 500px;
-  margin: 0 auto;
-  display: block;
-}
-
+/* 전화번호 볼드체 */
 .bold{
   font-weight: bold;
   text-align: center;
@@ -122,7 +128,7 @@ body .search_input {
 .contact_info .col-6:first-child {
   padding-right: 50px; /* 마지막 항목의 오른쪽 여백을 없앰 */
 }
-
+/* 상담사 이미지 */
 .customer img {
   width: 400px;
   height: 300px;
@@ -132,12 +138,8 @@ body .search_input {
 
 /* 피해 신고하기 */
 .report{
- padding: 30px 0;
+ padding:0px;
  width: 100%;
- }
-.report h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
  }
 .row {
   display: flex; /*버튼 2째줄 가로로 표시 */
@@ -167,3 +169,4 @@ body .search_input {
 .compensation img {
   width: 400px;
 }
+
