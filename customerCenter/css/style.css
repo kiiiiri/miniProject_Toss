@@ -18,7 +18,6 @@ body {
   background-color: #EEF6F3;
 }
 
-
 .compensation {
   background-color: #F5F6F8;
   flex-direction: row;
@@ -45,8 +44,8 @@ p {
 body .btn.btn_custom {
   background-color: #f0f0f0;
   color: #333;
-  margin: 5px 20px;
-  padding: 10px 20px;
+  margin: 5px 0px;
+  padding: 10px 0px;
   font-size: 14px;
   width: 100%;
   transition: all 0.2s ease; 
@@ -63,18 +62,36 @@ body .btn_custom svg {
   margin-bottom: 5px;
 }
 #btn_more {
-  width: 110px;
+  width: 100px;
   margin: 0px;
   float: left;
 }
 
 /* 검색창 스타일 */
-body .input-group{
-width: 35%;
-padding-top: 20px;
+.search-box-container {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  position: relative;
 }
-body .search_input{
-padding: 20px;
+
+.search-box {
+  border: none;
+  font-size: 18px;
+  color: #333;
+  width: 100%;
+  outline: none;
+  background: none;
+  padding-left: 35px; /* 아이콘과 텍스트 간격 확보 */
+}
+
+.search-icon {
+  position: absolute;
+  left: 0px; /* 왼쪽 정렬 */
+  color: #bbb; /* 아이콘 색상 */
+  font-size: 18px;
 }
 
 /* 이미지 컨테이너 */
@@ -83,6 +100,7 @@ padding: 20px;
   align-items: center; /* 세로 중앙 정렬 */
   justify-content: center; /* 양쪽에 배치 */
   flex-direction: row; /* 이미지를 오른쪽으로 배치 */
+  height: auto;
 }
 
 .img_container img {
@@ -102,32 +120,29 @@ padding: 20px;
 }
 
 /* 고객센터 안내 */
-.customer{
-  max-height: 300px;
-}
-
 .customer .contact_info {
   display: flex;  /* 전화번호 가로정렬 */
   flex-direction: row; /* 가로로 배치 */
   text-align: center;
-  }
+  height: 100px;
+   }
 
   .contact_info .col-6 {
     width: auto;
     position: relative; /* 가상 요소를 부모에 상대적으로 배치할 수 있도록 설정 */
     text-align: center;
     font-size: large;
-    padding: 0px 10px; /* 구분선과 항목 사이에 여백 추가 */
     margin: 30px;
+    height: auto;
   }
- 
-.contact_info .col-6:not(:last-child) {
-  border-right: 1px solid #ccc; /* 마지막 항목을 제외한 항목들에 구분선 추가 */
+  .contact_info .line{
+    width: 1px;  /* 선의 두께 */
+  background-color: #ccc;  /* 선의 색상 */
+   margin: 0 20px;  /* 좌우 여백 */
+   margin-top: 20px;
+   height: 100%;
 }
 
-.contact_info .col-6:first-child {
-  padding-right: 50px; /* 마지막 항목의 오른쪽 여백을 없앰 */
-}
 /* 상담사 이미지 */
 .customer img {
   width: 400px;
@@ -137,16 +152,13 @@ padding: 20px;
 }
 
 /* 피해 신고하기 */
-.report{
- padding:0px;
- width: 100%;
- }
 .row {
   display: flex; /*버튼 2째줄 가로로 표시 */
   justify-content: space-between; /* 버튼들 간의 간격을 균등하게 배치 */
 }
 .col-12 {
- width: 800px;
+ width: 100%;
+ max-width: 99%;
  padding-top: 20px;
  }
 .col-3 {
