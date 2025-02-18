@@ -1,252 +1,206 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자주 묻는 질문 - 토스</title>
-    <link rel="icon" href="img/favicon.png" sizes="32x32" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="css/style.css" rel="stylesheet">  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>토스 고객센터</title>
+  <link rel="icon" href="img/favicon.png" sizes="32x32" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- jQuery library -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.min.js"></script>
+  <link href="css/style.css" rel="stylesheet">  
 </head>
 <body>
   <header class="navbar">
-      <div class="logo">
-        <a href="#"><img src="img/logo2.png" alt="아이콘"></a></div>
-      <nav class="nav-links">
-          <a href="#">자주 묻는 질문</a>
-          <a href="#">피해 사건 신고</a>
-          <a href="#">토스의 보안</a>
-      </nav>
-  </header>
-  <div class="container">
-    <h1>자주 묻는 질문</h1>
-    <div class="search-box-container">
-        <i class="fa fa-search search-icon"></i> <!-- 돋보기 아이콘 추가 -->
-        <input type="text" class="search-box" placeholder="무엇이든 찾아보세요">
-    </div>
-    
-    <div class="category-list">
-        <div class="category">질문 TOP</div>
-        <div class="category">송금</div>
-        <div class="category">계좌</div>
-        <div class="category">카드</div>
-        <div class="category">토스쇼핑</div>
-        <div class="category">결제</div>
-        <div class="category">주식</div>
-        <div class="category">미성년</div>
-        <div class="category">이용 문의</div>
-        <div class="category">안심보상제</div>
-        <div class="category">대출</div>
-        <div class="category">토스 프리엄</div>
-        <div class="category">토스 모바일</div>
-        <div class="category">알림</div>
-        <div class="category">자료실</div>
-    </div>
-    
-    <div class="faq-list">
-        <div class="faq-item">
-            <div class="faq-question">티몬/위메프 결제 취소 접수 방법이 궁금해요.</div>
-            <div class="faq-answer">
-                <p>티몬/위메프 가맹점에서 토스를 통한 결제 후 환불 접수가 필요하시다면 고객님의 결제 수단 확인 후 환불 접수가 필요해요.</p>
-                <p><strong>※ 결제 수단에 따라 접수 방법이 다르기 때문에 접수 전 꼭 확인해 주세요.</strong></p>
-                
-                <h3>카드 결제</h3>
-                <ul>
-                    <li><a href="#">접수 링크</a>를 통해 고객님의 결제 내역이 확인된다면 접수를 완료해 주세요.</li>
-                    <li>토스뱅크 체크카드 결제는 토스뱅크 고객센터로 문의해 주세요.</li>
-                </ul>
-                
-                <h3>계좌 결제</h3>
-                <ul>
-                    <li>토스뱅크 계좌에서 간편결제(네이버페이, 카카오페이 등)를 통해 결제했다면 각 페이사 고객센터로 문의해 주세요.</li>
-                    <li><a href="#">접수 링크</a>를 통해 고객님의 결제 내역이 확인된다면 접수를 완료해 주세요.</li>
-                    <li>계좌 직접 결제를 진행하셨거나 입금해서 결제 내역이 확인된다면 <a href="#">토스페이먼츠 홈페이지</a>에서 결제 건 확인 후 접수해 주세요.</li>
-                </ul>
-                
-                <h3>Q. 같은 계좌 결제인데 접수 경로가 상이한 이유?</h3>
-                <p>A. "토스페이" 간편결제와 "토스페이먼츠 PG" 결제는 결제 수단이 상이해요.</p>
-                <p>토스페이는 토스 앱에 등록된 결제 수단을 통해 앱 결제를 진행하지만, 토스페이먼츠는 결제대행사이기 때문에 PG사를 거쳐 결제가 진행돼요.</p>
-                <p>같은 계좌에서 결제했더라도 결제 방식이 다를 수 있어 접수 경로가 상이해요.</p>
-                <p><a href="#">토스페이먼츠 서비스 확인하기</a></p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">토스 비밀번호를 어떻게 바꾸나요?</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">비밀번호를 여러 번 틀려서 계정이 잠겼는데요. 어떻게 풀 수 있나요?</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">토스 앱에서 송금한 후 송금확인증은 어떻게 발급받나요?</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">토스 프리엄을 해지하고 싶어요.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">오픈뱅킹 자동이체 문자를 받았어요.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">토스페이 결제 취소 / 환불이 필요해요.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">티몬/페이퍼 결제 취소하고 싶어요.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">토스유스카드 결제 건의 취소 / 환불이 필요해요.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">토스뱅크 통장의 각종 증명서는 어떻게 발급받을 수 있나요?</div>
-        </div>
-    </div>
-    
-    <div class="pagination">
-        <span class="active">1</span>
-        <span>2</span>
-        <span>3</span>
-        <span>4</span>
-        <span>5</span>
-    </div>
-</div>
-
-  <div class="contact-section">
-      <div class="container">
-        <div class="row align-items-center">
-          <!-- 왼쪽 텍스트 영역 -->
-          <div class="col-md-7 text-center text-md-start">
-            <h2>문제가 아직 해결되지 않았다면<br> 언제든 연락해주세요.</h2>
-            <p class="text-muted">24시간 고객센터</p>
-            <div class="d-flex justify-content-center justify-content-md-start gap-4">
-              <div>
-                <span class="d-block text-muted">피해·사기 상담</span>
-                <strong class="fs-4">1661-4905</strong>
-              </div>
-              <div class="border-start ps-4">
-                <span class="d-block text-muted">일반 상담</span>
-                <strong class="fs-4">1599-4905</strong>
-              </div>
-            </div>
-          </div>
-          
-          <!-- 오른쪽 이미지 영역 -->
-          <div class="col-md-5 text-center text-md-end">
-            <img src="img/hand-phone-call-icon.png" alt="고객센터 문의" class="img-fluid" style="max-height: 200px;">
-          </div>
-        </div>
-      </div>
+    <div class="logo">
+      <a href="#"><img src="img/logo2.png" alt="아이콘"></a></div>
+    <nav class="nav-links">
+        <a href="#">자주 묻는 질문</a>
+        <a href="#">피해 사건 신고</a>
+        <a href="#">토스의 보안</a>
+    </nav>
+</header>
+<div class="container">
+  <h1>자주 묻는 질문</h1>
+  <div class="search-box-container">
+      <i class="fa fa-search search-icon"></i>
+      <input type="text" class="search-box" placeholder="무엇이든 찾아보세요">
   </div>
+
+  <div class="category-list list-group">
+    <div class="category list-group-item" style="color:rgb(100, 100, 228)">질문 TOP</div>
+    <div class="category list-group-item">송금</div>
+    <div class="category list-group-item">계좌</div>
+    <div class="category list-group-item">카드</div>
+    <div class="category list-group-item">토스쇼핑</div>
+    <div class="category list-group-item">결제</div>
+    <div class="category list-group-item">주식</div>
+    <div class="category list-group-item">미성년</div>
+    <div class="category list-group-item">이용 문의</div>
+    <div class="category list-group-item">안심보상제</div>
+    <div class="category list-group-item">대출</div>
+    <div class="category list-group-item">토스 프리엄</div>
+    <div class="category list-group-item">토스 모바일</div>
+    <div class="category list-group-item">알림</div>
+    <div class="category list-group-item">자료실</div>
+  </div>
+
+  <ul class="pagination custom-pagination">
+    <li class="prev"><a href="#"><</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li class="next"><a href="#">></a></li>
+  </ul>
 </div>
 
-  <footer class="bg-light text-dark py-4">
-
-    <!-- 상단 설명 -->
+<div class="contact-section" style="background:#EEF6F3;">
     <div class="container">
-      <div class="row">
-        <div class="col-md-2">
-          <!-- 서비스 -->
-          <h5>서비스</h5>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-secondary">공지사항</a></li>
-            <li><a href="#" class="text-secondary">자주 묻는 질문</a></li>
-            <li><a href="#" class="text-secondary">공동인증서 관리</a></li>
-            <li><a href="#" class="text-secondary">계정 일시잠금</a></li>
-            <li><a href="#" class="text-secondary">고객센터</a></li>
-            <li><a href="#" class="text-secondary">브랜드 리소스센터</a></li>
-            <li><a href="#" class="text-secondary">토스의 개인정보 보호</a></li>
-            <li><a href="#" class="text-secondary">토스유스카드</a></li>
-          </ul>
+      <div class="row align-items-center">
+        <!-- 왼쪽 텍스트 영역 -->
+        <div class="col-md-7 text-md-start">
+          <h2>문제가 아직 해결되지 않았다면<br> 언제든 연락해주세요.</h2>
+          <p class="text-muted">24시간 고객센터</p>
+          <div class="d-flex justify-content-center justify-content-md-start gap-4">
+            <div>
+              <span class="d-block text-muted">피해·사기 상담</span>
+              <strong class="fs-4">1661-4905</strong>
+            </div>
+            <div class="border-start ps-4">
+              <span class="d-block text-muted">일반 상담</span>
+              <strong class="fs-4">1599-4905</strong>
+            </div>
+          </div>
         </div>
-        <div class="col-md-2">
-          <!-- 회사 -->
-          <h5>회사</h5>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-secondary">회사 소개</a></li>
-            <li><a href="#" class="text-secondary">토스페이먼츠</a></li>
-            <li><a href="#" class="text-secondary">토스인슈어런스</a></li>
-            <li><a href="#" class="text-secondary">토스증권</a></li>
-            <li><a href="#" class="text-secondary">토스씨엑스</a></li>
-            <li><a href="#" class="text-secondary">토스뱅크</a></li>
-            <li><a href="#" class="text-secondary">토스플레이스</a></li>
-            <li><a href="#" class="text-secondary">토스모바일</a></li>
-            <li><a href="#" class="text-secondary">채용</a></li>
-            <li><a href="#" class="text-secondary">기술 블로그</a></li>
-            <li><a href="#" class="text-secondary">블로그</a></li>
-            <li><a href="#" class="text-secondary">공고</a></li>
-          </ul>
-        </div>
-        <div class="col-md-2">
-          <!-- 문의 -->
-          <h5>문의</h5>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-secondary">사업 제휴</a></li>
-            <li><a href="#" class="text-secondary">토스쇼핑 입점문의</a></li>
-            <li><a href="#" class="text-secondary">광고 문의</a></li>
-            <li><a href="#" class="text-secondary">인증 사업 문의</a></li>
-            <li><a href="#" class="text-secondary">마케팅·PR</a></li>
-            <li><a href="#" class="text-secondary">IR</a></li>
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <!-- 고객센터 -->
-          <h5>고객센터</h5>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-secondary">전화: 1599-4905 (24시간 연중무휴)</a></li>
-            <li><a href="#" class="text-secondary">이메일(고객전용): support@toss.im</a></li>
-            <li><a href="#" class="text-secondary">이메일(외부기관전용): safe@toss.im</a></li>
-            <li><a href="#" class="text-secondary">민원 접수</a></li>
-            <li><a href="#" class="text-secondary">민원 접수(비즈니스 고객)</a></li>
-          </ul>
+        
+        <!-- 오른쪽 이미지 영역 -->
+        <div class="col-md-5 text-center text-md-end">
+          <img src="img/hand-phone-call-icon.png" alt="고객센터 문의" class="img-fluid" style="max-height: 200px;">
         </div>
       </div>
     </div>
-    
-    <!-- 하단 내용 추가 -->
-    
-    <div class="container mt-4" id="info">
-      <div class="row">
-          <h5>㈜비바리퍼블리카</h5>
-          <p class="text-muted">사업자 등록번호 : 120-88-01280 | 대표 : 이승건<br>
-            호스팅 서비스 : 주식회사 비바리퍼블리카 | 통신판매업 신고번호 : 2014-서울강남-03377 사업자정보확인<br>
-            06236 서울특별시 강남구 테헤란로 142, 4층, 10층, 11층, 12층, 13층, 22층, 23층 (역삼동, 아크플레이스)<br>
-            고객센터 : 서울특별시 강남구 테헤란로 133, 9층 (역삼동, 한국타이어빌딩)</p>
-      </div>
+</div>
+</div>
 
-      <!-- 하단 링크들 (4개씩 나열) -->
-      <div class="footer-links">
-        <a href="#">서비스 이용약관</a>
-        <a href="#">통합 금융정보 서비스 약관</a>
-        <a href="#">마이데이터 서비스 이용약관</a>
-        <a href="#">이용자의 권리 및 유의사항</a>
-        <a href="#" class="text-dark">개인정보 처리방침</a>
-        <a href="#" class="text-dark">채용팀 개인정보 처리방침</a>
-        <a href="#" class="text-dark">어드민 서비스 개인정보 처리방침</a>
-        <a href="#">영상정보처리기기 운영 관리 방침</a>
-        <a href="#" class="text-dark">위치기반서비스 이용약관</a>
-        <a href="#">가맹점 고지사항</a>
-        <a href="#">토스 전자서명인증업무준칙</a>
-        <a href="#">토스 전자인증서비스 약관</a>
-        <a href="#">금융소비자보호</a>
-        <a href="#" class="text-dark">토스비즈니스 개인정보 처리방침</a>
+<footer class="bg-light text-dark py-4">
+
+  <!-- 상단 설명 -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <!-- 서비스 -->
+        <h5>서비스</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-secondary">공지사항</a></li>
+          <li><a href="#" class="text-secondary">자주 묻는 질문</a></li>
+          <li><a href="#" class="text-secondary">공동인증서 관리</a></li>
+          <li><a href="#" class="text-secondary">계정 일시잠금</a></li>
+          <li><a href="#" class="text-secondary">고객센터</a></li>
+          <li><a href="#" class="text-secondary">브랜드 리소스센터</a></li>
+          <li><a href="#" class="text-secondary">토스의 개인정보 보호</a></li>
+          <li><a href="#" class="text-secondary">토스유스카드</a></li>
+        </ul>
       </div>
-      <div class="social-links mt-4">
-        <a href="https://www.facebook.com/toss.official" target="_blank">
-          <img src="img/icn-facebook.svg" alt="토스 페이스북" class="img-fluid" />
-        </a>
-        <a href="https://blog.toss.im/" target="_blank">
-          <img src="img/icn-blog.svg" alt="토스 블로그" class="img-fluid" />
-        </a>
-        <a href="https://post.naver.com/tossblog" target="_blank">
-          <img src="img/icn-naver.svg" alt="토스 네이버포스트" class="img-fluid" />
-        </a>
-        <a href="https://x.com/toss__official?mx=2" target="_blank">
-          <img src="img/icn-twitter.svg" alt="토스 X(트위터)" class="img-fluid" />
-        </a>
-        <a href="https://www.instagram.com/toss.im/" target="_blank">
-          <img src="img/icn-instagram.svg" alt="토스 인스타그램" class="img-fluid" />
-        </a>
+      <div class="col-md-2">
+        <!-- 회사 -->
+        <h5>회사</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-secondary">회사 소개</a></li>
+          <li><a href="#" class="text-secondary">토스페이먼츠</a></li>
+          <li><a href="#" class="text-secondary">토스인슈어런스</a></li>
+          <li><a href="#" class="text-secondary">토스증권</a></li>
+          <li><a href="#" class="text-secondary">토스씨엑스</a></li>
+          <li><a href="#" class="text-secondary">토스뱅크</a></li>
+          <li><a href="#" class="text-secondary">토스플레이스</a></li>
+          <li><a href="#" class="text-secondary">토스모바일</a></li>
+          <li><a href="#" class="text-secondary">채용</a></li>
+          <li><a href="#" class="text-secondary">기술 블로그</a></li>
+          <li><a href="#" class="text-secondary">블로그</a></li>
+          <li><a href="#" class="text-secondary">공고</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <!-- 문의 -->
+        <h5>문의</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-secondary">사업 제휴</a></li>
+          <li><a href="#" class="text-secondary">토스쇼핑 입점문의</a></li>
+          <li><a href="#" class="text-secondary">광고 문의</a></li>
+          <li><a href="#" class="text-secondary">인증 사업 문의</a></li>
+          <li><a href="#" class="text-secondary">마케팅·PR</a></li>
+          <li><a href="#" class="text-secondary">IR</a></li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <!-- 고객센터 -->
+        <h5>고객센터</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-secondary">전화: 1599-4905 (24시간 연중무휴)</a></li>
+          <li><a href="#" class="text-secondary">이메일(고객전용): support@toss.im</a></li>
+          <li><a href="#" class="text-secondary">이메일(외부기관전용): safe@toss.im</a></li>
+          <li><a href="#" class="text-secondary">민원 접수</a></li>
+          <li><a href="#" class="text-secondary">민원 접수(비즈니스 고객)</a></li>
+        </ul>
       </div>
     </div>
-  </footer>
+  </div>
+  
+  <!-- 하단 내용 추가 -->
+  
+  <div class="container mt-4" id="info">
+    <div class="row">
+        <h5>㈜비바리퍼블리카</h5>
+        <p class="text-muted">사업자 등록번호 : 120-88-01280 | 대표 : 이승건<br>
+          호스팅 서비스 : 주식회사 비바리퍼블리카 | 통신판매업 신고번호 : 2014-서울강남-03377 사업자정보확인<br>
+          06236 서울특별시 강남구 테헤란로 142, 4층, 10층, 11층, 12층, 13층, 22층, 23층 (역삼동, 아크플레이스)<br>
+          고객센터 : 서울특별시 강남구 테헤란로 133, 9층 (역삼동, 한국타이어빌딩)</p>
+    </div>
+
+    <!-- 하단 링크들 (4개씩 나열) -->
+    <div class="footer-links">
+      <a href="#">서비스 이용약관</a>
+      <a href="#">통합 금융정보 서비스 약관</a>
+      <a href="#">마이데이터 서비스 이용약관</a>
+      <a href="#">이용자의 권리 및 유의사항</a>
+      <a href="#" class="text-dark">개인정보 처리방침</a>
+      <a href="#" class="text-dark">채용팀 개인정보 처리방침</a>
+      <a href="#" class="text-dark">어드민 서비스 개인정보 처리방침</a>
+      <a href="#">영상정보처리기기 운영 관리 방침</a>
+      <a href="#" class="text-dark">위치기반서비스 이용약관</a>
+      <a href="#">가맹점 고지사항</a>
+      <a href="#">토스 전자서명인증업무준칙</a>
+      <a href="#">토스 전자인증서비스 약관</a>
+      <a href="#">금융소비자보호</a>
+      <a href="#" class="text-dark">토스비즈니스 개인정보 처리방침</a>
+    </div>
+    <div class="social-links mt-4">
+      <a href="https://www.facebook.com/toss.official" target="_blank">
+        <img src="img/icn-facebook.svg" alt="토스 페이스북" class="img-fluid" />
+      </a>
+      <a href="https://blog.toss.im/" target="_blank">
+        <img src="img/icn-blog.svg" alt="토스 블로그" class="img-fluid" />
+      </a>
+      <a href="https://post.naver.com/tossblog" target="_blank">
+        <img src="img/icn-naver.svg" alt="토스 네이버포스트" class="img-fluid" />
+      </a>
+      <a href="https://x.com/toss__official?mx=2" target="_blank">
+        <img src="img/icn-twitter.svg" alt="토스 X(트위터)" class="img-fluid" />
+      </a>
+      <a href="https://www.instagram.com/toss.im/" target="_blank">
+        <img src="img/icn-instagram.svg" alt="토스 인스타그램" class="img-fluid" />
+      </a>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
