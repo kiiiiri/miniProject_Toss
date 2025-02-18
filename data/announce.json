@@ -132,15 +132,15 @@
         "url" : "announcementDetail/index03.html"
       },
       {
-        "title" : "토스쇼핑 알림 신청서 변경 안내",
-        "date" : "2025. 01. 15",
-        "url" : "announcementDetail/index04.html"
-  
-      },
-      {
         "title" : "위치기반서비스 이용약관 변경 안내",
         "date" : "2025. 01. 14",
         "url" : "announcementDetail/index05.html"
+  
+      },
+      {
+        "title" : "티몬·위메프 환불서류 예시 안내",
+        "date" : "2024. 10. 15",
+        "url" : "announcementDetail/index09.html"
   
       },
       {
@@ -162,9 +162,15 @@
   
       },
       {
-        "title" : "티몬·위메프 환불서류 예시 안내",
-        "date" : "2024. 10. 15",
-        "url" : "announcementDetail/index09.html"
+        "title" : "토스쇼핑 알림 신청서 변경 안내",
+        "date" : "2025. 01. 15",
+        "url" : "announcementDetail/index04.html"
+  
+      },
+      {
+        "title" : "대출신청 이벤트 당첨자 안내",
+        "date" : "2025. 02. 03",
+        "url" : "announcementDetail/index02.html"
   
       },
       {
@@ -176,12 +182,6 @@
         "title" : "서비스 이용약관 개정 안내",
         "date" : "2025. 02. 12",
         "url" : "announcementDetail/index01.html"
-  
-      },
-      {
-        "title" : "대출신청 이벤트 당첨자 안내",
-        "date" : "2025. 02. 03",
-        "url" : "announcementDetail/index02.html"
   
       }
     ]
@@ -194,12 +194,6 @@
         "url" : "announcementDetail/index03.html"
       },
       {
-        "title" : "토스쇼핑 알림 신청서 변경 안내",
-        "date" : "2025. 01. 15",
-        "url" : "announcementDetail/index04.html"
-  
-      },
-      {
         "title" : "위치기반서비스 이용약관 변경 안내",
         "date" : "2025. 01. 14",
         "url" : "announcementDetail/index05.html"
@@ -212,15 +206,15 @@
   
       },
       {
-        "title" : "위치기반서비스 이용약관 변경 안내",
-        "date" : "2024. 12. 23",
-        "url" : "announcementDetail/index07.html"
+        "title" : "토스쇼핑 알림 신청서 변경 안내",
+        "date" : "2025. 01. 15",
+        "url" : "announcementDetail/index04.html"
   
       },
       {
-        "title" : "대출신청 이벤트 당첨자 안내",
-        "date" : "2024. 11. 29",
-        "url" : "announcementDetail/index08.html"
+        "title" : "위치기반서비스 이용약관 변경 안내",
+        "date" : "2024. 12. 23",
+        "url" : "announcementDetail/index07.html"
   
       },
       {
@@ -235,15 +229,21 @@
         "url" : "announcementDetail/index10.html"
       },
       {
-        "title" : "서비스 이용약관 개정 안내",
-        "date" : "2025. 02. 12",
-        "url" : "announcementDetail/index01.html"
+        "title" : "대출신청 이벤트 당첨자 안내",
+        "date" : "2024. 11. 29",
+        "url" : "announcementDetail/index08.html"
   
       },
       {
         "title" : "대출신청 이벤트 당첨자 안내",
         "date" : "2025. 02. 03",
         "url" : "announcementDetail/index02.html"
+  
+      },
+      {
+        "title" : "서비스 이용약관 개정 안내",
+        "date" : "2025. 02. 12",
+        "url" : "announcementDetail/index01.html"
   
       }
     ]
@@ -256,12 +256,6 @@
         "url" : "announcementDetail/index03.html"
       },
       {
-        "title" : "토스쇼핑 알림 신청서 변경 안내",
-        "date" : "2025. 01. 15",
-        "url" : "announcementDetail/index04.html"
-  
-      },
-      {
         "title" : "위치기반서비스 이용약관 변경 안내",
         "date" : "2025. 01. 14",
         "url" : "announcementDetail/index05.html"
@@ -274,15 +268,15 @@
   
       },
       {
-        "title" : "위치기반서비스 이용약관 변경 안내",
-        "date" : "2024. 12. 23",
-        "url" : "announcementDetail/index07.html"
+        "title" : "토스쇼핑 알림 신청서 변경 안내",
+        "date" : "2025. 01. 15",
+        "url" : "announcementDetail/index04.html"
   
       },
       {
-        "title" : "대출신청 이벤트 당첨자 안내",
-        "date" : "2024. 11. 29",
-        "url" : "announcementDetail/index08.html"
+        "title" : "위치기반서비스 이용약관 변경 안내",
+        "date" : "2024. 12. 23",
+        "url" : "announcementDetail/index07.html"
   
       },
       {
@@ -295,6 +289,12 @@
         "title" : "ICT 샌드박스 임시허가 관련 통지사항 안내",
         "date" : "2024. 10. 30",
         "url" : "announcementDetail/index10.html"
+      },
+      {
+        "title" : "대출신청 이벤트 당첨자 안내",
+        "date" : "2024. 11. 29",
+        "url" : "announcementDetail/index08.html"
+  
       },
       {
         "title" : "서비스 이용약관 개정 안내",
