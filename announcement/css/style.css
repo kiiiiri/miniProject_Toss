@@ -3,10 +3,6 @@
   margin: 0;
 }
 
-.pagination .active {
-  color: red;
-}
-
 .navbar {
   border: none !important;
   background-color: white !important;
@@ -74,14 +70,39 @@ nav img {
 }
 
 .custom-pagination {
-  margin-left: 35px;
+  margin-left: 40px;
+}
+
+.custom-pagination .btn {
+  margin-right: 15px;
+  background-color: white;
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+
+.custom-pagination .btn:active,
+.custom-pagination .btn:focus {
+  background-color:#dddddd;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+}
+
+.pagination .active .btn{
+  border-radius: 50%;
+  background-color:#dddddd;
+}
+
+.prev_btn:focus,
+.next_btn:focus {
+  outline: none;
 }
 
 button.disabled {
   cursor: not-allowed !important; 
   pointer-events: none; 
 }
-
 
 .custom-pagination li a {
   margin: 5px 5px;

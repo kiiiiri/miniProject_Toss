@@ -4,8 +4,6 @@ $(document).ready(async function() {
   let response = await fetch("/data/announce.json"); 
   let jsonData = await response.json();
 
-  console.log("JSON 데이터 확인:", jsonData); 
-
   clearNoticeList()
 
   console.log(jsonData.count);
@@ -44,6 +42,8 @@ $(document).ready(async function() {
 
     $(".pagination li").removeClass("active");
     $("#page"+curPageNumber).parent().addClass("active");
+
+    $(this).blur();
   })
 
   $(".next_btn").on("click", function() {
@@ -53,6 +53,8 @@ $(document).ready(async function() {
 
     $(".pagination li").removeClass("active");
     $("#page"+curPageNumber).parent().addClass("active");
+
+    $(this).blur();
   })
 
   function clearNoticeList() {
@@ -84,6 +86,8 @@ $(document).ready(async function() {
       `);
       }  
     });
+
+    window.scrollTo(0,0);
   }
 
   function updatePaginationButton(pageNumber) {
