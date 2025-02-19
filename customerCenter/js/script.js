@@ -33,3 +33,14 @@ document.addEventListener("click", function(event) {
 document.querySelector(".search-box").addEventListener("click", function(event) {
   window.location.href = "#";  // 링크로 이동
 });
+
+// navbar 사이트 스크롤 감지
+window.addEventListener('scroll', function() {
+  const nav_container = document.querySelector('.nav_container');
+  
+  if (window.scrollY > 0) {
+    nav_container.classList.add('scrolled');
+  } else {
+    nav_container.classList.remove('scrolled');
+  }
+});

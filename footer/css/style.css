@@ -8,8 +8,11 @@ a:hover {
   color: #0056B3 !important; /* hover 시 파란색으로 변경 */
 }
 
-.bg-light {
-  background-color: #F9FAFB !important;
+footer {
+  justify-content: center;
+   padding: 20px 0; /* 위아래 여백 추가 */
+  margin: 0 auto;
+  background-color: #F9FAFB;
 }
 
 h5 {
@@ -58,12 +61,6 @@ a:hover img.img-fluid {
   text-decoration: none; /* hover 상태에서 밑줄 제거 */
 }
 
-#footer {
-  justify-content: center;
-   padding: 20px 0; /* 위아래 여백 추가 */
-  margin: 0 auto;
-  background-color: #F9FAFB;
-}
 .social-links{
  margin-bottom: 100px; 
 }
