@@ -236,20 +236,20 @@ button.disabled {
 }
 
 .contact-section .container {
-  padding: 50px 00px;
-  margin-top: 0;
-  margin-bottom: 0;
+  align-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .help_text {
   display: block;
   float: left;
-  margin-left: 300px;
+  transform: translateX(100px);
 }
 .help_img {
   display: block;
   float: right;
-  margin-right: 200px;
+  transform: translateX(-100px);
 }
 
 @media (min-width: 768px) {
@@ -258,22 +258,7 @@ button.disabled {
   }
 }
 
-@media (max-width: 1200px) {
-  .help_text {
-    margin-left: 200px;
-  }
-  .help_img {
-    margin-right: 100px;
-  }
-}
-
 @media (max-width: 768px) {
-  .help_text {
-    margin-left: 100px;
-  }
-  .help_img {
-    margin-right: 50px;
-  }
   .contact-section .row {
     flex-direction: column;
     text-align: center;
