@@ -42,35 +42,41 @@
     <h1>무엇을 도와드릴까요?</h1>
     <div class="search-box-container">
       <i class="fa fa-search search-icon"></i>
-      <input type="text" class="search-box" placeholder="무엇이든 찾아보세요">
+      <input type="text" class="search-box" placeholder="궁금한 점을 검색해보세요">
   </div>
   </div>
-  <div class="section customer img_container">
-    <div id="center">
-      <h2>토스 고객센터에서<br> 24시간 상담받을 수 있어요</h2>
-      <div class="contact_info">
-        <div class="col-6">
-          <p>일반 상담</p>
-          <p class="bold">1599-4905</p>
-        </div>
-        <div class="line"></div>
-        <div class="col-6">
-          <p>피해・사기 상담</p>
-          <p class="bold">1661-4905</p>
+  <div class="section customer">
+    <div class="input">
+      <!-- 좌측 컬럼: 제목 + 전화번호 -->
+      <div class="left-col">
+        <h2>토스 고객센터에서<br>24시간 상담받을 수 있어요</h2>
+        <div class="contact_info">
+          <div class="col-6">
+            <p>일반 상담</p>
+            <p class="bold">1599-4905</p>
+          </div>
+          <line></line>
+          <div class="col-6">
+            <p>피해・사기 상담</p>
+            <p class="bold">1661-4905</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div>
-      <img src="img/toss_tell.png" alt="상담 이미지" class="img-fluid">
-      <div></div>
+      <!-- 우측 컬럼: 이미지 -->
+      <div class="right-col">
+        <img src="img/toss_tell.png" alt="상담 이미지" class="img img-fluid">
+      </div>
     </div>
   </div>
-  <div class="section">
-    <div class="report">
-      <h2>금전 피해를 입으셨나요?</h2>
-      <p>혹시라도 토스에서 금전 피해를 입으셨다면 신고해주세요. 앞으로 고객님이 안심하고 토스를 쓰실 수<br> 있도록, 토스의 잘못이 아니라도 피해 금액을 보상해드려요.</p>
-       <div class="row">
-      <div class="col-12">
+  
+<div class="section report">
+    <div class="input">
+      <div class="header">
+        <h2>금전 피해를 입으셨나요?</h2>
+        <p>혹시라도 토스에서 금전 피해를 입으셨다면 신고해주세요. 앞으로 고객님이 안심하고 토스를 쓰실 수<br> 있도록, 토스의 잘못이 아니라도 피해 금액을 보상해드려요.</p>
+      </div>
+       <div class="btn_gruop">
+           <div class="button first-row">
         <button class="btn btn_custom">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <g fill="none" fill-rule="evenodd">
@@ -83,11 +89,9 @@
           <br>토스 계정을 잠시 잠그고 싶어요
         </button>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-3">
-        <button class="btn btn_custom">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <div class="second-row">
+      <button class="btn btn_custom">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <g fill="#ffa3ab">
               <circle cx="7.5" cy="7.9" r="3.8"></circle>
               <path d="M7.5 12.8c-5 0-7 3.4-7 5s4.2 2 7 2 7-.4 7-2-2-5-7-5z"></path>
@@ -99,9 +103,7 @@
           </svg>
           <br>명의 도용 신고
         </button>
-      </div>
-      <div class="col-3">
-        <button class='btn btn_custom'>
+                 <button class='btn btn_custom'>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <g fill="none" fill-rule="evenodd">
               <path fill="#EE4452" d="M10.268 2.913L.74 19.416c-.771 1.333.192 3 1.73 3H21.53c1.539 0 2.502-1.667 1.73-3L13.734 2.913c-.771-1.333-2.694-1.333-3.465 0"></path>
@@ -110,9 +112,7 @@
           </svg>
           <br>보이스피싱 신고
         </button>
-      </div>
-      <div class="col-3">
-        <button class="btn btn_custom auto">
+        <button class="btn btn_custom ">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="m20 4c0-1.1-.9-2-2-2h-12c-1.1 0-2 .9-2 2v1h16z" fill="#6f7477"></path>
             <path d="m4 20c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-1h-16z" fill="#6f7477"></path>
@@ -124,9 +124,7 @@
           </svg>
           <br>분실/도난/탈취 신고
         </button>
-      </div>
-      <div class="col-3">
-        <button class="btn btn_custom auto">
+        <button class="btn btn_custom ">
           <svg enable-background="new 0 0 24 24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="m18.52 6.163h-13.04c-.493 0-.913.36-.988.847l-1.624 10.515c-.281 1.818 1.126 3.458 2.965 3.458h12.334c1.839 0 3.246-1.64 2.965-3.458l-1.624-10.515c-.075-.487-.495-.847-.988-.847z" fill="#cdd2d7"></path>
             <path d="m7.855 6.163v-1c0-2.289 1.856-4.145 4.145-4.145s4.145 1.856 4.145 4.145v1" fill="none" stroke="#4e5968" stroke-miterlimit="10" stroke-width="2"></path>
@@ -134,24 +132,24 @@
           <br>중고거래 사기 신고
         </button>
       </div>
+      </div>
+    </div>
     </div>
   </div>
-  </div>
-  <div class="section compensation img_container">
-    <div>
+</div>
+<div class="section compensation">
+  <div class="input">
+    <div class="comp_text">
       <h2>토스 안심보상제를<br> 알려드릴게요</h2>
       <p>사칭, 보이스피싱 또는 중고거래로 피해를 입으셨나요?<br> 너무 걱정하지 마세요. 토스 안심보상제가 있어요.</p>
       <button class="btn btn_custom auto" id="btn_more">더 알아보기</button>
     </div>
-    <div>
-      <img src="./img/toss_compensation.png" alt="안심보상제">
+    <div class="comp_img">
+      <img src="./img/toss_compensation.png" alt="안심보상제" class="img">
     </div>
   </div>
-  <div class="section help">
-   <h1>무엇을 도와드릴까요?</h1>
-    <input type="text" class="form-control input-group  " placeholder="검색어를 입력하세요" aria-label="Search">
-  </div>
-
+   </div>
+  
   <div id="footer_container"></div>
    
 </body>
