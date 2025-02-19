@@ -62,8 +62,9 @@ body .btn_custom svg {
 .search-box-container {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 0;
   margin-bottom: 20px;
   position: relative;
 }
@@ -72,7 +73,7 @@ body .btn_custom svg {
   border: none;
   font-size: 18px;
   color: #333;
-  width: 100%;
+  width: 600px;
   outline: none;
   background: none;
   padding-left: 35px; /* 아이콘과 텍스트 간격 확보 */
