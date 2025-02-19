@@ -1,0 +1,197 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 0px 3px rgba(0, 0, 0, 0.1);
+  padding: 10px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  padding: 8px 20px !important; /* 위아래 패딩 줄이기 */
+  height: 60px; /* 네비게이션 높이 조정 */
+}
+.navbar-header {
+  margin-top: 5px;
+}
+
+.navbar .logo {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-right: 310px;
+}
+.navbar .nav-links {
+  display: flex;
+  padding: 8px 15px !important; /* 메뉴 간격 줄이기 */
+  gap: 30px;
+}
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
+  
+}
+.navbar .nav-links a:hover {
+  color: black;
+}
+.content {
+  padding-top: 120px;
+  text-align: center;
+}
+
+.contact-section h2 {
+font-size: 24px;
+font-weight: bold;
+color: #333;
+margin-bottom: 10px;
+}
+.contact-section p {
+font-size: 16px;
+color: #666;
+}
+.contact-section strong {
+color: #000;
+}
+@media (max-width: 768px) {
+.contact-section .row {
+flex-direction: column;
+text-align: center;
+}
+.contact-section .border-start {
+border-left: none !important;
+padding-left: 0 !important;
+}
+}
+.contact-numbers {
+display: flex;
+justify-content: center;
+gap: 30px;
+font-weight: bold;
+margin-top: 10px;
+align-items: center; /* 이미지와 텍스트 수평 정렬 */
+
+}
+.contact-numbers div {
+font-size: 18px;
+color: #000;
+}
+.css-1gqzl0a {
+top: 0;
+right: 0;
+
+height: 372px;
+}
+.col-md-5 img {
+margin-left: 10px; /* 텍스트와 이미지 사이의 간격을 설정 */
+float: right; /* 이미지를 오른쪽에 배치 */
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+.container {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 40px;
+}
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 50px;
+  margin-bottom:30px;
+}
+.search-box-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.search-box {
+    border: none;
+    font-size: 30px;
+    color: rgb(228, 225, 225);
+    width: 100%;
+    outline: none;
+    background: none;
+    padding-left: 45px; /* 아이콘과 텍스트 간격 확보 */
+}
+.search-box::placeholder {
+  color: rgb(189, 189, 194); /* 원하는 색상으로 변경 */
+  opacity: 1; /* 투명도를 조정 (기본값은 0.5~0.7 정도) */
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px; /* 왼쪽 정렬 */
+    color: #e0dede; /* 아이콘 색상 */
+    font-size: 28px;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  float: left;
+}
+.category {
+  padding: 20px 0;
+  padding-left: 10px;
+  color: gray;
+  cursor: pointer;
+  font-size: 20px;
+  border : none;
+}
+.category:hover{
+  color: rgb(108, 108, 235);
+  background-color: #e7e7e7;
+  border-radius: 10px;
+  border-collapse: 10px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.pagination span {
+  margin: 0 5px;
+  padding: 8px 12px;
+  background: #f2f2f2;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.pagination .active {
+  background: gray;
+  color: black;
+}
+.custom-pagination {
+  margin-left: 35px;
+}
+
+.custom-pagination li a {
+  margin: 5px 5px;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  background: none;
+  border-radius: 50%;
+  color: #757575;
+}
+.mb-3 {
+  margin-bottom: 30px;
+}
