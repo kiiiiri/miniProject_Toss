@@ -52,58 +52,94 @@
     </div>
   </nav>
 
-  <div class="container">
-    <h1>자주 묻는 질문</h1>
-    <div class="search-box-container">
-      <i class="fa fa-search search-icon"></i>
-      <input type="text" class="search-box" placeholder="무엇이든 찾아보세요">
-    </div>
+  <div class="container first_box_parent">
+    <div class="container first_box">
+      <h1>자주 묻는 질문</h1>
+      <div class="search-box-container">
+        <i class="fa fa-search search-icon"></i>
+        <input type="text" class="search-box" placeholder="무엇이든 찾아보세요">
+      </div>
+  
+      <div class="list_parent">
+        <div class="category-list list-group">
+          <div class="category list-group-item" style="color:rgb(100, 100, 228)">질문 TOP</div>
+          <div class="category list-group-item">송금</div>
+          <div class="category list-group-item">계좌</div>
+          <div class="category list-group-item">카드</div>
+          <div class="category list-group-item">토스쇼핑</div>
+          <div class="category list-group-item">결제</div>
+          <div class="category list-group-item">주식</div>
+          <div class="category list-group-item">미성년</div>
+          <div class="category list-group-item">이용 문의</div>
+          <div class="category list-group-item">안심보상제</div>
+          <div class="category list-group-item">대출</div>
+          <div class="category list-group-item">토스 프리엄</div>
+          <div class="category list-group-item">토스 모바일</div>
+          <div class="category list-group-item">알림</div>
+          <div class="category list-group-item">자료실</div>
+        </div>
+    
+        <div class="list_box">
+          <ul class="list">
+            <li class="css-1njwwbp e1wrbkd21">
+              <div>
+                <a href="#" class="faq-question">프리엄을 해지하고 싶어요.</a>
+              </div>
+            </li>
+            <li class="css-1njwwbp e1wrbkd21">
+              <div>
+                <a href="#" class="faq-question">프리엄을 해지하고 싶어요.</a>
+              </div>
+            </li>
+            <li class="css-1njwwbp e1wrbkd21">
+              <div>
+                <a href="#" class="faq-question">프리엄을 해지하고 싶어요.</a>
+              </div>
+            </li>
+            <li class="css-1njwwbp e1wrbkd21">
+              <div>
+                <a href="#" class="faq-question">프리엄을 해지하고 싶어요.</a>
+              </div>
+            </li>
+            <li class="css-1njwwbp e1wrbkd21">
+              <div>
+                <a href="#" class="faq-question">프리엄을 해지하고 싶어요.</a>
+              </div>
+            </li>
+            <li class="css-1njwwbp e1wrbkd21">
+              <div>
+                <a href="#" class="faq-question">프리엄을 해지하고 싶어요.</a>
+              </div>
+            </li>
+            <li class="css-1njwwbp e1wrbkd21">
+              <div>
+                <a href="#" class="faq-question">프리엄을 해지하고 싶어요.</a>
+              </div>
+            </li>
+          </ul>
 
-    <div class="category-list list-group">
-      <div class="category list-group-item" style="color:rgb(100, 100, 228)">질문 TOP</div>
-      <div class="category list-group-item">송금</div>
-      <div class="category list-group-item">계좌</div>
-      <div class="category list-group-item">카드</div>
-      <div class="category list-group-item">토스쇼핑</div>
-      <div class="category list-group-item">결제</div>
-      <div class="category list-group-item">주식</div>
-      <div class="category list-group-item">미성년</div>
-      <div class="category list-group-item">이용 문의</div>
-      <div class="category list-group-item">안심보상제</div>
-      <div class="category list-group-item">대출</div>
-      <div class="category list-group-item">토스 프리엄</div>
-      <div class="category list-group-item">토스 모바일</div>
-      <div class="category list-group-item">알림</div>
-      <div class="category list-group-item">자료실</div>
-    </div>
-
-    <div class="container-fluid">
-      <a id="question-list-btn" class="reset-button typography--medium btn btn-default" href="#" style="display: none;">
-        ← 질문 목록
-        <!-- 질문 목록 버튼은 현재 안보이는데 버튼 누르면 나오게 설정했었던거지만
-         혹시 몰라서 냅두겠습니다. -->
-      </a>
-      <div id="faq-container">
-        <!-- JSON 데이터가 여기에 삽입됨 -->
+          <ul class="pagination custom-pagination">
+            <li class="prev"><button class="btn prev_btn"><</button></li>
+            <li class="active"><button class="btn page_btn" id="page${i}">1</button></li>
+            <li class="active"><button class="btn page_btn" id="page${i}">2</button></li>
+            <li class="active"><button class="btn page_btn" id="page${i}">3</button></li>
+            <li class="active"><button class="btn page_btn" id="page${i}">4</button></li>
+            <li class="active"><button class="btn page_btn" id="page${i}">5</button></li>
+            <li class="next"><button class="btn next_btn">></button></li>
+          </ul>
+        </div>
       </div>
     </div>
-
-    <ul class="pagination custom-pagination">
-      <li class="prev"><a href="#"><</a></li>
-      <li><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li><a href="#">5</a></li>
-      <li class="next"><a href="#">></a></li>
-    </ul>
   </div>
+   
 
-  <div class="contact-section" style="background:#EEF6F3;">
+<div class="contact-section" style="background:#EEF6F3;">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-md-7 text-md-start">
-          <h2>문제가 아직 해결되지 않았다면<br> 언제든 연락해주세요.</h2>
+        <!-- 왼쪽 텍스트 영역 -->
+        <div class="help_text">
+          <h2 style="font-size: 30px;">문제가 아직 해결되지 않았다면<br> 언제든 연락해주세요.</h2>
+>>>>>>> 1fe4903 (q'&'a layout 설정)
           <p class="text-muted">24시간 고객센터</p>
           <div class="d-flex justify-content-center justify-content-md-start gap-4">
             <div>
@@ -116,7 +152,9 @@
             </div>
           </div>
         </div>
-        <div class="col-md-5 text-center text-md-end">
+        
+        <!-- 오른쪽 이미지 영역 -->
+        <div class="help_img">
           <img src="img/hand-phone-call-icon.png" alt="고객센터 문의" class="img-fluid" style="max-height: 200px;">
         </div>
       </div>
