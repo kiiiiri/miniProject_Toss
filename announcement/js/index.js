@@ -1,6 +1,8 @@
 $(document).ready(async function() {
   let curPageNumber = 1;
+  let maxPageBtnLength = 9;
   let jsonData = null;
+  let totalPages = 0;
 
   try {
     let response = await fetch("/data/announce.json"); 
@@ -11,24 +13,7 @@ $(document).ready(async function() {
     return;
   }
 
-  clearNoticeList()
-
-  let pageKeys = Object.keys(jsonData).filter(key => key.startsWith("page"));
-  let totalPages = pageKeys.length;
-
-  for (let i = 1; i <= totalPages; i++) {
-    if (i === 1) {
-      $(".pagination").append(`<li class="prev"><button class="btn prev_btn"><</button></li>`)
-    }
-
-    $(".pagination").append(`<li class=${i === 1 ? 'active' : ''}><button class="btn page_btn" id="page${i}">${i}</button></li>`)
-
-    if (i === totalPages) {
-      $(".pagination").append(`<li class="next"><button class="btn next_btn">></button></li>`)
-    }
-  }
-
-  applyContentData(1);
+  init();
 
   $(".page_btn").on("click", function() {
     clearNoticeList()
@@ -39,32 +24,58 @@ $(document).ready(async function() {
     $(".pagination li").removeClass("active");
     $(this).parent().addClass("active");
 
-    updatePaginationButton(pageNumber);
-  
+    updatePaginationArrowButton(pageNumber);
     applyContentData(pageNumber);
+    calculatePaginationRange();
   })
 
   $(".prev_btn").on("click", function() {
     clearNoticeList()
     applyContentData(--curPageNumber);
-    updatePaginationButton(curPageNumber);
-
-    $(".pagination li").removeClass("active");
-    $("#page"+curPageNumber).parent().addClass("active");
-
+    updatePaginationArrowButton();
+    addActiveClassInList();
+    calculatePaginationRange();
     $(this).blur();
   })
 
   $(".next_btn").on("click", function() {
     clearNoticeList()
     applyContentData(++curPageNumber);
-    updatePaginationButton(curPageNumber);
-
-    $(".pagination li").removeClass("active");
-    $("#page"+curPageNumber).parent().addClass("active");
-
+    updatePaginationArrowButton();
+    addActiveClassInList();
+    calculatePaginationRange();
+    console.log(curPageNumber);
     $(this).blur();
   })
+
+  function init() {
+    clearNoticeList()
+
+    let pageKeys = Object.keys(jsonData).filter(key => key.startsWith("page"));
+    totalPages = pageKeys.length;
+
+    for (let i = 1; i <= totalPages; i++) {
+      if (i == maxPageBtnLength) {
+        $(".pagination").append(`
+          <li><button class="btn page_btn" id="page${totalPages}">${totalPages}</button></li>
+          <li class="next"><button class="btn next_btn">></button></li>`)
+        converterPageBtnToThreeDot(8);
+        break;
+      }
+
+      if (i === 1) {
+        $(".pagination").append(`<li class="prev"><button class="btn prev_btn"><</button></li>`)
+      }
+
+      $(".pagination").append(`<li class=${i === 1 ? 'active' : ''}><button class="btn page_btn" id="page${i}">${i}</button></li>`)
+
+      if (i === totalPages) {
+        $(".pagination").append(`<li class="next"><button class="btn next_btn">></button></li>`)
+      }
+    }
+
+    applyContentData(1);
+  }
 
   function clearNoticeList() {
     $(".notice-list").empty();
@@ -99,18 +110,68 @@ $(document).ready(async function() {
     window.scrollTo(0,0);
   }
 
-  function updatePaginationButton(pageNumber) {
-    if (pageNumber == 1) {
+  function updatePaginationArrowButton() {
+    if (curPageNumber == 1) {
       $(".prev_btn").addClass("disabled").prop("disabled", true); 
     } else {
       $(".prev_btn").removeClass("disabled").prop("disabled", false); 
     }
 
-    if (pageNumber == jsonData.count) {
+    if (curPageNumber == totalPages) {
       $(".next_btn").addClass("disabled").prop("disabled", true); 
     } else {
       $(".next_btn").removeClass("disabled").prop("disabled", false); 
     }
+  }
+
+  function calculatePaginationRange() {
+    let centerOfPageBtn = 5;  
+
+    if (curPageNumber <= centerOfPageBtn) {
+      for (let i = 0; i < centerOfPageBtn + 2; i++) {
+        $(".pagination").children().eq(1 + i).children().text((1 + i));
+        $(".pagination").children().eq(1 + i).children().attr("id", "page" + (1 + i));
+      }
+      converterPageBtnToThreeDot(8,(totalPages - 1));
+      converterThreeDotToPageBtn(2,2)
+      return;
+    } else if (totalPages - curPageNumber < centerOfPageBtn - 1) {
+      for (let i = 0; i < centerOfPageBtn + 2; i++) {
+        $(".pagination").children().eq(maxPageBtnLength - i).children().text((totalPages - i));
+        $(".pagination").children().eq(maxPageBtnLength - i).children().attr("id", "page" + (totalPages - i));
+      }
+      converterPageBtnToThreeDot(2,2);
+      converterThreeDotToPageBtn(8,(totalPages - 1))
+      return;
+    }
+
+    let startPageNumber = curPageNumber - 2;
+    let startPageBtnNumber = centerOfPageBtn - 2;
+
+    for (let i = 0; i < centerOfPageBtn; i++) {
+      $(".pagination").children().eq(startPageBtnNumber + i).children().text((startPageNumber + i));
+      $(".pagination").children().eq(startPageBtnNumber + i).children().attr("id", "page" + (startPageNumber + i));
+    }
+
+    converterPageBtnToThreeDot(2);
+    converterPageBtnToThreeDot(8);
+
+    addActiveClassInList();
+  }
+
+  function addActiveClassInList() {
+    $(".pagination li").removeClass("active");
+    $("#page"+curPageNumber).parent().addClass("active");
+  }
+
+  function converterPageBtnToThreeDot(index) {
+    $(".pagination").children().eq(index).children().text("...");
+    $(".pagination").children().eq(index).children().addClass("disabled");
+  }
+
+  function converterThreeDotToPageBtn(index, pageNumber) {
+    $(".pagination").children().eq(index).children().text(pageNumber);
+    $(".pagination").children().eq(index).children().removeClass("disabled");
   }
 });
 

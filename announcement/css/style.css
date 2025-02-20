@@ -22,14 +22,22 @@ nav img {
 }
 
 .navbar-toggle {
-  display: block !important;
+  margin-top: 16px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #2b2b2b !important;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 400;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
   background-color: #e7e7e7;
   border-radius: 10px;
   border-collapse: 10px;
-  color: white;
 }
 
 #mainTitle {
@@ -91,6 +99,16 @@ nav img {
   background-color:#dddddd;
 }
 
+.page_btn {
+  font-size: 15px;
+  font-weight: 700;
+  color: #4f4e4e;
+}
+
+.prev_btn, .next_btn {
+  font-weight: 500;
+}
+
 .prev_btn:focus,
 .next_btn:focus {
   outline: none;
@@ -122,6 +140,11 @@ button.disabled {
   }
 }
 
+@media (max-width: 768px) {
+  .navbar {
+    background-color: white !important; 
+  }
+}
 
 
 
