@@ -1,53 +1,57 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
+* {
   padding: 0;
-  background-color: #fff;
+  margin: 0;
+}
+li {
+  list-style: none;
 }
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: white;
+  border: none !important;
+  background-color: white !important;
   box-shadow: 0 0px 3px rgba(0, 0, 0, 0.1);
-  padding: 10px 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-  padding: 8px 20px !important; /* 위아래 패딩 줄이기 */
-  height: 60px; /* 네비게이션 높이 조정 */
-}
-.navbar-header {
-  margin-top: 5px;
+  padding: 0px;
+  height: 60px;
 }
 
-.navbar .logo {
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
-  margin-right: 310px;
+nav > .container {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: white;
+  height: 60px;
 }
-.navbar .nav-links {
-  display: flex;
-  padding: 8px 15px !important; /* 메뉴 간격 줄이기 */
-  gap: 30px;
+
+nav img {
+  margin-top: 13px;
+  margin-left: 40px;
+  width: 90px;
 }
-.navbar .nav-links a {
-  text-decoration: none;
-  color: #666;
-  font-size: 14px;
-  
+
+#myNavbar {
+  margin-top: 5px;
+  margin-right: 50px;
+  font-size: 16px;
 }
-.navbar .nav-links a:hover {
-  color: black;
+
+.navbar-toggle {
+  margin-top: 13px;
+  margin-right: 50px;
+  display: block !important;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  background-color: #e7e7e7;
+  border-radius: 10px;
+  border-collapse: 10px;
+  color: white;
+}
+.first_box {
+  margin-top: 70px;
 }
 .content {
   padding-top: 120px;
   text-align: center;
 }
-
 .contact-section h2 {
 font-size: 24px;
 font-weight: bold;
@@ -61,16 +65,7 @@ color: #666;
 .contact-section strong {
 color: #000;
 }
-@media (max-width: 768px) {
-.contact-section .row {
-flex-direction: column;
-text-align: center;
-}
-.contact-section .border-start {
-border-left: none !important;
-padding-left: 0 !important;
-}
-}
+
 .contact-numbers {
 display: flex;
 justify-content: center;
@@ -80,30 +75,12 @@ margin-top: 10px;
 align-items: center; /* 이미지와 텍스트 수평 정렬 */
 
 }
-.contact-numbers div {
-font-size: 18px;
-color: #000;
-}
-.css-1gqzl0a {
-top: 0;
-right: 0;
 
-height: 372px;
-}
-.col-md-5 img {
-margin-left: 10px; /* 텍스트와 이미지 사이의 간격을 설정 */
-float: right; /* 이미지를 오른쪽에 배치 */
-}
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #fff;
-}
-.container {
-  max-width: 1100px;
-  margin: 50px auto;
-  padding: 40px;
 }
 h1 {
   font-size: 30px;
@@ -162,25 +139,75 @@ h1 {
   border-radius: 10px;
   border-collapse: 10px;
 }
-
-.pagination {
+.list_parent {
   display: flex;
-  justify-content: center;
-  padding-top: 20px;
+  margin-left: 30px;
+  width: 100%;
 }
-.pagination span {
-  margin: 0 5px;
-  padding: 8px 12px;
-  background: #f2f2f2;
+.list_box {
+  float: right;
+  margin-left: 50px;
+}
+.list_box li {
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+.faq-question {
+  justify-content: left;
+  width: 500px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  display: block;
+  font-size: 17px;
+  color: #757575;
+  text-decoration: none !important;
+}
+.faq-question:hover {
   border-radius: 5px;
-  cursor: pointer;
+  background-color: #e8e8e8;
+  color: #757575 !important;
 }
-.pagination .active {
-  background: gray;
-  color: black;
+.faq-question::before {
+  content: "Q";
+  color: #949494;
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 18px;
 }
 .custom-pagination {
-  margin-left: 35px;
+  margin-left: 40px;
+}
+
+.custom-pagination .btn {
+  margin-right: 15px;
+  background-color: white;
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+
+.custom-pagination .btn:active,
+.custom-pagination .btn:focus {
+  background-color:#dddddd;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+}
+
+.pagination .active .btn{
+  border-radius: 50%;
+  background-color:#dddddd;
+}
+
+.prev_btn:focus,
+.next_btn:focus {
+  outline: none;
+}
+
+button.disabled {
+  cursor: not-allowed !important; 
+  pointer-events: none; 
 }
 
 .custom-pagination li a {
@@ -192,6 +219,41 @@ h1 {
   border-radius: 50%;
   color: #757575;
 }
-.mb-3 {
-  margin-bottom: 30px;
+
+.prev > a, .next > a {
+  font-weight: 400 !important;
+  color: #b5b5b5 !important;
+}
+
+.contact-section .container {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.help_text {
+  display: block;
+  float: left;
+}
+.help_img {
+  display: block;
+  float: right;
+}
+
+@media (min-width: 768px) {
+  .navbar-toggle {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section .row {
+    flex-direction: column;
+    text-align: center;
+  }
+  .contact-section .border-start {
+    border-left: none !important;
+    padding-left: 0 !important;
+  }
 }
