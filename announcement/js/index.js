@@ -67,7 +67,7 @@ $(document).ready(async function() {
       if (index == 9) {
         $(".notice-list").append(`
           <li class="active"> 
-              <a href="${content.url}">
+              <a href="announcementDetail/index.html?text=${encodeURIComponent(content.text)}">
                   <h4 class="notice-content">${content.title}</h4>
                   <p class="date">${content.date}</p>
               </a>
@@ -76,7 +76,7 @@ $(document).ready(async function() {
       } else {
         $(".notice-list").append(`
           <li> 
-              <a href="${content.url}">
+              <a href="announcementDetail/index.html?text=${encodeURIComponent(content.text)}">
                   <h4 class="notice-content">${content.title}</h4>
                   <p class="date">${content.date}</p>
               </a>
