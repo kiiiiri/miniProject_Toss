@@ -5,12 +5,9 @@
 
 .navbar {
   border: none !important;
-  background-color: white !important;
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: bulr(10px);
   box-shadow: none !important;
-}
-
-nav > .container {
-  background-color: white;
 }
 
 nav img {
