@@ -36,7 +36,11 @@ body {
 .help .btn:hover {
   background-color: #E5E8EB;
 }
-
+.help .btn:focus,.btn:active  {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
 
 
 /* 제목 스타일 */
@@ -84,10 +88,10 @@ body .btn_custom svg {
 }
 /* 네비게이션  */
 
-.navbar {
-  border: none !important;
-  background-color: white !important;
-  box-shadow: none !important;
+body .navbar {
+  border: none ;
+  background-color: white ;
+  box-shadow: none ;
 }
 /* 스크롤시 하단 테두리 생김 */
 .nav_container.scrolled {
@@ -98,13 +102,14 @@ nav > .container {
 }
 
 nav img {
-  margin-top: 22px;
-  margin-left: 40px;
+  margin-top: 10px;
+  margin-left: 400px;
   width: 82px;
 }
 
 #myNavbar {
   margin-top: 10px;
+  margin-right: 400px;
   font-size: 16px;
 }
 
