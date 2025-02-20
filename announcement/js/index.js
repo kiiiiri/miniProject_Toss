@@ -1,19 +1,29 @@
 $(document).ready(async function() {
   let curPageNumber = 1;
+  let jsonData = null;
 
-  let response = await fetch("/data/announce.json"); 
-  let jsonData = await response.json();
+  try {
+    let response = await fetch("/data/announce.json"); 
+     jsonData = await response.json();
+  } catch(error) {
+    console.log("Json Data를 가져오는 중 오류 발생 : ", error);
+    alert("데이터를 가져오는 중 오류가 발생했습니다. 나중에 다시 시도하세요.");
+    return;
+  }
 
   clearNoticeList()
-  
-  for (let i = 1; i <= jsonData.count; i++) {
+
+  let pageKeys = Object.keys(jsonData).filter(key => key.startsWith("page"));
+  let totalPages = pageKeys.length;
+
+  for (let i = 1; i <= totalPages; i++) {
     if (i === 1) {
       $(".pagination").append(`<li class="prev"><button class="btn prev_btn"><</button></li>`)
     }
 
     $(".pagination").append(`<li class=${i === 1 ? 'active' : ''}><button class="btn page_btn" id="page${i}">${i}</button></li>`)
 
-    if (i === jsonData.count) {
+    if (i === totalPages) {
       $(".pagination").append(`<li class="next"><button class="btn next_btn">></button></li>`)
     }
   }
