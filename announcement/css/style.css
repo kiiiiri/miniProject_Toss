@@ -86,20 +86,14 @@ nav img {
   outline: none;
 }
 
-.custom-pagination .btn:active,
-.custom-pagination .btn:focus {
-  background-color:#dddddd;
-  border: none;
-  outline: none;
-  border-radius: 50%;
-}
-
 .pagination .active .btn{
   border-radius: 50%;
   background-color:#dddddd;
 }
 
 .page_btn {
+  min-width: 40px;
+  min-height: 40px;
   font-size: 15px;
   font-weight: 700;
   color: #4f4e4e;
@@ -107,6 +101,13 @@ nav img {
 
 .prev_btn, .next_btn {
   font-weight: 500;
+}
+
+.page_btn:active {
+  background-color:white;
+  border: none;
+  outline: none;
+  border-radius: 50%;
 }
 
 .prev_btn:focus,

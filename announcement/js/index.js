@@ -3,6 +3,7 @@ $(document).ready(async function() {
   let maxPageBtnLength = 9;
   let jsonData = null;
   let totalPages = 0;
+  
 
   try {
     let response = await fetch("/data/announce.json"); 
@@ -49,6 +50,7 @@ $(document).ready(async function() {
   })
 
   function init() {
+    let firstPage = 1;
     clearNoticeList()
 
     let pageKeys = Object.keys(jsonData).filter(key => key.startsWith("page"));
@@ -63,18 +65,18 @@ $(document).ready(async function() {
         break;
       }
 
-      if (i === 1) {
+      if (i === firstPage) {
         $(".pagination").append(`<li class="prev"><button class="btn prev_btn"><</button></li>`)
       }
 
-      $(".pagination").append(`<li class=${i === 1 ? 'active' : ''}><button class="btn page_btn" id="page${i}">${i}</button></li>`)
+      $(".pagination").append(`<li class=${i === firstPage ? 'active' : ''}><button class="btn page_btn" id="page${i}">${i}</button></li>`)
 
       if (i === totalPages) {
         $(".pagination").append(`<li class="next"><button class="btn next_btn">></button></li>`)
       }
     }
 
-    applyContentData(1);
+    applyContentData(firstPage);
   }
 
   function clearNoticeList() {
@@ -125,23 +127,30 @@ $(document).ready(async function() {
   }
 
   function calculatePaginationRange() {
+    let firstPage = 1;
     let centerOfPageBtn = 5;  
 
     if (curPageNumber <= centerOfPageBtn) {
       for (let i = 0; i < centerOfPageBtn + 2; i++) {
-        $(".pagination").children().eq(1 + i).children().text((1 + i));
-        $(".pagination").children().eq(1 + i).children().attr("id", "page" + (1 + i));
+        let pageBtn = $(".pagination").children().eq(firstPage + i).children();
+        pageBtn.text((firstPage + i));
+        pageBtn.attr("id", "page" + (firstPage + i));
       }
+
       converterPageBtnToThreeDot(8,(totalPages - 1));
       converterThreeDotToPageBtn(2,2)
+
       return;
     } else if (totalPages - curPageNumber < centerOfPageBtn - 1) {
       for (let i = 0; i < centerOfPageBtn + 2; i++) {
-        $(".pagination").children().eq(maxPageBtnLength - i).children().text((totalPages - i));
-        $(".pagination").children().eq(maxPageBtnLength - i).children().attr("id", "page" + (totalPages - i));
+        let pageBtn = $(".pagination").children().eq(maxPageBtnLength - i).children();
+        pageBtn.text((totalPages - i));
+        pageBtn.attr("id", "page" + (totalPages - i));
       }
+
       converterPageBtnToThreeDot(2,2);
       converterThreeDotToPageBtn(8,(totalPages - 1))
+
       return;
     }
 
@@ -149,8 +158,9 @@ $(document).ready(async function() {
     let startPageBtnNumber = centerOfPageBtn - 2;
 
     for (let i = 0; i < centerOfPageBtn; i++) {
-      $(".pagination").children().eq(startPageBtnNumber + i).children().text((startPageNumber + i));
-      $(".pagination").children().eq(startPageBtnNumber + i).children().attr("id", "page" + (startPageNumber + i));
+      let pageBtn = $(".pagination").children().eq(startPageBtnNumber + i).children()
+      pageBtn.text((startPageNumber + i));
+      pageBtn.attr("id", "page" + (startPageNumber + i));
     }
 
     converterPageBtnToThreeDot(2);
