@@ -1,57 +1,76 @@
 body {
   font-family: Arial, sans-serif;
+  padding-top: 50px; /* 네비게이션 바 높이에 맞춰 여백을 추가 */
+
 }
 
 /* 섹션 스타일 */
 .section {
-  margin: 40px 0;
-  padding: 40px 0;
-   width: 100%;
-  text-align: center;
   display: flex;
-  align-items: center;
-  justify-content: start;
   flex-direction: column;
-} 
-
-.customer {
-  background-color: #EEF6F3;
+  align-items: center;
+  padding:100px 0;
+}
+.input {
+  width: 40%; /* 기본적으로 너비를 100%로 설정 */
+  max-width: 80%; /* 최대 너비를 80%로 설정 */
+  height: fit-content;
+}
+/* 섹션버튼 스타일 */
+.help .button-container {
+  display: flex;
+  justify-content: space-between; /* 버튼들 간 간격을 고르게 분배 */
+  gap: 10px; /* 버튼 간의 간격을 10px로 설정 */
+  flex-wrap: wrap; /* 화면 크기에 따라 버튼들이 자동으로 줄바꿈 되도록 설정 (반응형 지원) */
 }
 
-
-.compensation {
-  background-color: #F5F6F8;
-  flex-direction: row;
-  justify-content: center;
+.help .btn {
+  padding: 5px 10px;
+  background-color: #F2F4F6;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
 }
+
+.help .btn:hover {
+  background-color: #E5E8EB;
+}
+.help .btn:focus,.btn:active  {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
 
 /* 제목 스타일 */
 body div h1 {
   font-weight: bold;
-  font-size:xx-large;
- }
+  font-size: xx-large;
+}
 h2 {
   font-size: 28px;
   font-weight: bold;
-  text-align: left;
   margin-top: 40px;
   margin-bottom: 20px;
 }
 p {
   margin-bottom: 20px;
-  text-align: left;
 }
+
 /* 버튼 스타일 */
 body .btn.btn_custom {
   background-color: #f0f0f0;
   color: #333;
-  margin: 5px 20px;
-  padding: 10px 20px;
+  margin: 5px 0px;
+  padding: 10px 0px;
   font-size: 14px;
-  width: 100%;
+  width: 125px;
   transition: all 0.2s ease; 
- }
-
+}
+#first_btn {
+  width: 100px;
+}
 body .btn.btn_custom:hover {
   background-color: #e0e0e0;
   border-color: #bbb;
@@ -63,110 +82,317 @@ body .btn_custom svg {
   margin-bottom: 5px;
 }
 #btn_more {
-  width: 110px;
+  width: 100px;
   margin: 0px;
   float: left;
 }
+/* 네비게이션  */
+
+body .navbar {
+  border: none ;
+  background-color: white ;
+  box-shadow: none ;
+}
+/* 스크롤시 하단 테두리 생김 */
+.nav_container.scrolled {
+  border-bottom: 1px solid #E5E7EA; /* border-bottom 추가 */
+}
+nav > .container {
+  background-color: white;
+}
+
+nav img {
+  margin-top: 10px;
+  margin-left: 400px;
+  width: 82px;
+}
+
+#myNavbar {
+  margin-top: 10px;
+  margin-right: 400px;
+  font-size: 16px;
+}
+
+.navbar-toggle {
+  display: block !important;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  background-color: #e7e7e7;
+  border-radius: 10px;
+  border-collapse: 10px;
+  color: white;
+}
 
 /* 검색창 스타일 */
-body .input-group{
-width: 35%;
-padding-top: 20px;
-}
-body .search_input{
-padding: 20px;
-}
-
-/* 이미지 컨테이너 */
-.img_container {
+.help .search-box-container {
   display: flex;
-  align-items: center; /* 세로 중앙 정렬 */
-  justify-content: center; /* 양쪽에 배치 */
-  flex-direction: row; /* 이미지를 오른쪽으로 배치 */
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 0;
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
 }
 
-.img_container img {
-   object-fit: cover; /* 이미지가 잘리지 않도록 설정 */
+.help .search-box {
+  border: none;
+  font-size: 18px;
+  color: #333;
+  width: 800px;
+  outline: none;
+  background: none;
+  padding-left: 45px; /* 아이콘과 텍스트 간격 확보 */
+  cursor: pointer;
+}
+.help .search-box-container {
+  border: 2px solid #ccc;
+  transition: border 0.1s linear; /* 애니메이션 추가 */
 }
 
-/* 무엇을 도와드릴까요? */
-.help img {
-  width: 100px;
+.help .search-box-container:hover {
+  border-color: #007bff;  /* 파란색 테두리 강조 */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);  /* 파란색 그림자 */
 }
-
+.help .search-box-container.focused {
+  border-color: #007bff;  /* 파란색 테두리 강조 */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);  /* 파란색 그림자 */
+}
+.search-icon {
+  position: absolute;
+  left: 15px; /* 왼쪽 정렬 */
+  color: #bbb; /* 아이콘 색상 */
+  font-size: 18px;
+}
 
 /* 전화번호 볼드체 */
-.bold{
+.bold {
   font-weight: bold;
   text-align: center;
 }
 
-/* 고객센터 안내 */
-.customer{
-  max-height: 300px;
+/* 상담센터 */
+/* 상담섹션 전체 */
+.customer {
+  background-color: #EEF6F3;
+  display: flex;
+   align-items: center;
+   padding:18px;
 }
 
-.customer .contact_info {
-  display: flex;  /* 전화번호 가로정렬 */
-  flex-direction: row; /* 가로로 배치 */
-  text-align: center;
-  }
-
-  .contact_info .col-6 {
-    width: auto;
-    position: relative; /* 가상 요소를 부모에 상대적으로 배치할 수 있도록 설정 */
-    text-align: center;
-    font-size: large;
-    padding: 0px 10px; /* 구분선과 항목 사이에 여백 추가 */
-    margin: 30px;
-  }
- 
-.contact_info .col-6:not(:last-child) {
-  border-right: 1px solid #ccc; /* 마지막 항목을 제외한 항목들에 구분선 추가 */
+/* 전체 input 영역: 좌측과 우측 컬럼 배치 */
+.customer .input {
+  display: flex;
+  flex-direction: row; /* 좌우로 컬럼 배치 */
+  justify-content: space-between;
 }
 
-.contact_info .col-6:first-child {
-  padding-right: 50px; /* 마지막 항목의 오른쪽 여백을 없앰 */
+/* 좌측 컬럼: 제목과 전화번호 */
+.left-col {
+  flex: 1; /* 가용 공간 모두 사용 */
+  padding-top:60px;
 }
-/* 상담사 이미지 */
-.customer img {
-  width: 400px;
-  height: 300px;
+
+/* 제목 스타일 */
+.left-col h2 {
+  margin: 0;
+  text-align: left;
+}
+
+/* 전화번호 영역: 두 개의 상담 정보를 나란히 배치 */
+.contact_info {
+  display: flex;
+  justify-content: flex-start; /* 내부 항목들을 왼쪽에 정렬 */
+  padding-top: 20px;
+}
+
+.contact_info .col-6 {
+  margin: 20px;
+  text-align: left;
+  font-size: large;
+}
+
+/* 전화번호 구분선 | */
+.contact_info line {
+  width: 1px; /* 선의 너비 */
+  height: 60px;
+  background-color: #D5DFDF; /* 선의 색상 */
+  margin: 25px 20px; /* 상하 여백 */
+}
+
+/* 우측 컬럼: 이미지 */
+.right-col img.img-fluid {
+  position: relative;
+  right: 10%;
+  top: 6%;
   object-fit: cover;
   object-position: top;
+  width: 350px; /* 원하는 이미지 너비로 조정 */
+  height: 300px;
 }
 
 /* 피해 신고하기 */
-.report{
- padding:0px;
- width: 100%;
- }
-.row {
-  display: flex; /*버튼 2째줄 가로로 표시 */
-  justify-content: space-between; /* 버튼들 간의 간격을 균등하게 배치 */
+.report {
+  align-items: center;
+  }
+
+.first-row .btn.btn_custom {
+  width: 99%;
 }
-.col-12 {
- width: 800px;
- padding-top: 20px;
- }
-.col-3 {
-  flex: 1 1 22%; /* 각 버튼의 너비를 22%로 설정 */
-  margin: 5px; /* 버튼 간의 여백 */
+
+.second-row {
+  display: flex;
+}
+
+.second-row .btn.btn_custom {
+  flex-basis: 25%;
+  margin-right: 10px;
 }
 
 /* 토스 안심보상제 */
+
 .compensation {
+  background-color: #F5F6F8;
+  align-items: center;
+  padding: 20px;
+  height: 400px; /* 부모 요소의 높이를 이미지와 맞추기 */
+}
+
+.comp_text {
+  flex: 1; /* 텍스트 영역이 유동적으로 조정됨 */
+  min-width: 300px;
+}
+
+.comp_img {
+  position: relative;
+  top:-30% ;
+  flex: 1; /* 이미지 영역도 유동적으로 조정됨 */
+  text-align: right; /* 이미지 오른쪽 정렬 */
+}
+
+.comp_img img {
+  max-width: 100%; /* 반응형 적용 */
+  height: 280px;
+}
+
+/* 자주 묻는 질문(whathelp) */
+.whathelp .input ul {
+  list-style: none; /* 기본 리스트 스타일 제거 */
+  padding: 15px 20px; /* 여백 추가 */
+  margin: 20px 0;
+  text-decoration: none; /* 밑줄 제거 */
+  font-size: larger;
+}
+.whathelp a {
+  text-decoration: none !important; /* 밑줄 제거 */
+  color: inherit; /* 부모 요소의 색상 상속 (링크 기본 색상 유지) */
+}
+
+.whathelp a:hover {
+  color: inherit; /* hover 시 색상 변화 없애기 */
+}
+.whathelp .input a ul {
+  text-decoration: none; /* 기본적으로 밑줄 제거 */
+  }
+
+.whathelp .input ul:hover {
+  background-color: #F2F3F5; /* hover 시 배경 색상 변경 */
+  text-decoration: none; /* 기본적으로 밑줄 제거 */
+}
+.whathelp a i {
+  margin-right: 15px; /* 아이콘과 텍스트 사이에 10px 여백 추가 */
+}
+.whathelp .search-icon {
+  /* 원하는 스타일 추가 */
+}
+.whathelp .search-box-container { 
   display: flex;
-   margin-top: 40px;
+  align-items: center;
+  background-color: #FAFAFB;
+  padding: 5px 0;
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
 }
 
-.compensation h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+.whathelp .search-box-container .search-box {
+  flex-grow: 1; /* input 요소가 나머지 공간을 차지하도록 설정 */
+  border: none; /* input 요소의 기본 테두리 제거 */
+  outline: none; /* 포커스 시 나타나는 기본 테두리 제거 */
+  margin-left: 40px;
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #FAFAFB;
 }
 
-/* 안심보상 이미지 */
-.compensation img {
-  width: 400px;
+#fullhelp{
+  margin-top: 60px;
+}
+#fullhelp a{
+  color: #3182F7; /* 기본 색상 */
+  text-decoration: none; /* 기본적으로 밑줄 제거 */
 }
 
+#fullhelp a:hover {
+  color: #3072DB; /* hover 시 색상 변경 */
+}
+/* 반응형 스타일 */
+
+/* 작은 화면에서 레이아웃 변경 (모바일) */
+@media (max-width: 768px) {
+  /* 고객 섹션에서 입력 및 이미지 영역을 세로로 배치 */
+  .customer .input {
+    flex-direction: column; /* 세로 정렬 */
+  }
+
+  /* 고객 섹션에서 이미지 크기 조정 */
+  .right-col img.img-fluid {
+    width: 100%; /* 이미지 너비를 100%로 설정 */
+    height: auto; /* 이미지 높이는 자동 조정 */
+    position: relative;
+    right: 0;
+    top: 0;
+  }
+
+  /* 제목 및 전화번호 영역 */
+  .contact_info {
+    flex-direction: column; /* 세로로 정렬 */
+    align-items: center; /* 중앙 정렬 */
+  }
+
+  .contact_info .col-6 {
+    margin: 10px 0;
+    text-align: center;
+    font-size: medium;
+  }
+
+  /* 버튼 스타일 */
+  .first-row .btn.btn_custom,
+  .second-row .btn.btn_custom {
+    width: 100%; /* 버튼 너비를 100%로 설정 */
+    margin-bottom: 10px; /* 버튼 간격 추가 */
+  }
+
+  /* 보상 텍스트 영역과 이미지 영역도 세로로 배치 */
+  .compensation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .comp_img img {
+    height: auto;
+  }
+}
+
+/* 더 큰 화면에서 스타일 적용 (태블릿 및 데스크탑) */
+@media (min-width: 769px) {
+  .customer .input {
+    flex-direction: row; /* 가로 정렬 */
+  }
+
+  .right-col img.img-fluid {
+    width: 350px;
+    height: 300px;
+  }
+}
