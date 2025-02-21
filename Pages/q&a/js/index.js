@@ -1,7 +1,7 @@
 $(document).ready(async function() {
   let curPageNumber = 1;
 
-  let response = await fetch("/data/q&a.json"); 
+  let response = await fetch("/Pages/data/q&a.json"); 
   let jsonData = await response.json();
 
   clearNoticeList()
