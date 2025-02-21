@@ -9,12 +9,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding:100px 0;
+  width: 100% ; /* 뷰포트 전체 너비 */
+  margin-left: 0; /* 중앙 정렬된 컨테이너 내에서도 전체 너비 효과 */
+  padding: 100px 0;
+  box-sizing: border-box; /* 패딩 포함 너비 계산 */
 }
 .input {
   width: 40%; /* 기본적으로 너비를 100%로 설정 */
   max-width: 80%; /* 최대 너비를 80%로 설정 */
-  height: fit-content;
+  height: auto;
 }
 /* 섹션버튼 스타일 */
 .help .button-container {
@@ -202,34 +205,35 @@ nav img {
 
 /* 전화번호 영역: 두 개의 상담 정보를 나란히 배치 */
 .contact_info {
-  display: flex;
-  justify-content: flex-start; /* 내부 항목들을 왼쪽에 정렬 */
-  padding-top: 20px;
+  display: flex;              /* 자식 요소들을 가로로 배치 */
+  flex-direction: row;        /* 수평 배열 */
+  align-items: center;        /* 세로 중앙 정렬 */
+  justify-content: center;    /* 가로 중앙 정렬 */
+  font-size: medium;
+  min-width: 500px;           /* 전화번호 행의 최소 너비 설정 */
 }
-
 .contact_info .col-6 {
-  margin: 20px;
-  text-align: left;
-  font-size: large;
+  flex: 1;                    /* 두 영역이 동일한 공간 차지 */
+  text-align: center;         /* 내용 중앙 정렬 */
+  margin: 10px 0;
 }
-
 /* 전화번호 구분선 | */
-.contact_info line {
-  width: 1px; /* 선의 너비 */
-  height: 60px;
-  background-color: #D5DFDF; /* 선의 색상 */
-  margin: 25px 20px; /* 상하 여백 */
-}
 
-/* 우측 컬럼: 이미지 */
+.contact_info line {
+  display: block;             /* 요소를 블록 레벨로 처리 */
+  width: 1px;
+  height: 60px;
+  background-color: #D5DFDF;  /* 구분선 색상 */
+  margin: 25px 20px;          /* 좌우 여백 */
+}
+ /* 우측 컬럼: 이미지  */
 .right-col img.img-fluid {
-  position: relative;
-  right: 10%;
+   right: 10%;
   top: 6%;
   object-fit: cover;
   object-position: top;
-  width: 350px; /* 원하는 이미지 너비로 조정 */
-  height: 300px;
+  width: 100%; /* 원하는 이미지 너비로 조정 */
+  height: auto;
 }
 
 /* 피해 신고하기 */
@@ -253,27 +257,27 @@ nav img {
 /* 토스 안심보상제 */
 
 .compensation {
-  background-color: #F5F6F8;
-  align-items: center;
-  padding: 20px;
+   background-color: #F5F6F8;
+   padding: 20px;
   height: 400px; /* 부모 요소의 높이를 이미지와 맞추기 */
 }
 
-.comp_text {
-  flex: 1; /* 텍스트 영역이 유동적으로 조정됨 */
-  min-width: 300px;
+.compensation .input {
+  display: flex;
+  align-items: center; /* 수직 정렬 */
+  justify-content: space-between; /* 양쪽 끝 정렬 */
+  gap: 20px; /* 요소 간 간격 */
 }
 
-.comp_img {
-  position: relative;
-  top:-30% ;
-  flex: 1; /* 이미지 영역도 유동적으로 조정됨 */
-  text-align: right; /* 이미지 오른쪽 정렬 */
+.comp_text,
+#comp_img {
+  flex: 1; /* 두 요소가 같은 너비 차지 */
+  max-width: 50%; /* 최대 너비 제한 */
 }
 
-.comp_img img {
-  max-width: 100%; /* 반응형 적용 */
-  height: 280px;
+#comp_img img {
+  width: 100%; /* 부모 크기에 맞게 이미지 조정 */
+  height: auto; /* 비율 유지 */
 }
 
 /* 자주 묻는 질문(whathelp) */
@@ -303,9 +307,7 @@ nav img {
 .whathelp a i {
   margin-right: 15px; /* 아이콘과 텍스트 사이에 10px 여백 추가 */
 }
-.whathelp .search-icon {
-  /* 원하는 스타일 추가 */
-}
+
 .whathelp .search-box-container { 
   display: flex;
   align-items: center;
@@ -337,62 +339,118 @@ nav img {
 #fullhelp a:hover {
   color: #3072DB; /* hover 시 색상 변경 */
 }
-/* 반응형 스타일 */
+/* 반응형 적용 */
 
 /* 작은 화면에서 레이아웃 변경 (모바일) */
 @media (max-width: 768px) {
-  /* 고객 섹션에서 입력 및 이미지 영역을 세로로 배치 */
-  .customer .input {
+  .section {
+    padding: 50px 0;
+  }
+  /* 토스 안심보상제 */
+  .compensation .input {
     flex-direction: column; /* 세로 정렬 */
-  }
-
-  /* 고객 섹션에서 이미지 크기 조정 */
-  .right-col img.img-fluid {
-    width: 100%; /* 이미지 너비를 100%로 설정 */
-    height: auto; /* 이미지 높이는 자동 조정 */
-    position: relative;
-    right: 0;
-    top: 0;
-  }
-
-  /* 제목 및 전화번호 영역 */
-  .contact_info {
-    flex-direction: column; /* 세로로 정렬 */
-    align-items: center; /* 중앙 정렬 */
-  }
-
-  .contact_info .col-6 {
-    margin: 10px 0;
     text-align: center;
-    font-size: medium;
   }
 
-  /* 버튼 스타일 */
+  .comp_text,
+  #comp_img {
+    max-width: 100%; /* 모바일에서 100% 너비 사용 */
+  }
+
+  #comp_img img {
+    width: 100%;
+    max-width: 100%; /* 모바일에서 이미지 크기 조절 */
+    margin: 0 auto;
+  }
+
+  .compensation {
+    padding: 20px;
+    height: auto; /* 부모 요소 높이를 자동으로 조정 */
+  }
+/* 변경사항: 연락처 영역의 최소 너비 고정 및 중앙 정렬 */
+  .contact_info {
+    min-width: 250px;
+    margin: 20px auto;
+  }
+  .left-col, .right-col {
+    min-width: 100%;
+    text-align: center;
+  }
+  
+   /* 버튼 너비를 100%로 조정 */
   .first-row .btn.btn_custom,
   .second-row .btn.btn_custom {
-    width: 100%; /* 버튼 너비를 100%로 설정 */
-    margin-bottom: 10px; /* 버튼 간격 추가 */
+    width: 100%;
+    margin-bottom: 10px;
   }
 
-  /* 보상 텍스트 영역과 이미지 영역도 세로로 배치 */
-  .compensation {
-    flex-direction: column;
-    align-items: center;
+  .help .button-container {
+    justify-content: center; /* 모바일에서 버튼 중앙 정렬 */
+    flex-wrap: wrap;
+    gap: 15px;
   }
 
-  .comp_img img {
+  /* 검색창 및 버튼 스타일 */
+  .help .search-box-container {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .help .search-box-container:hover,
+  .help .search-box-container.focused {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+
+  .help .search-box {
+    width: 100%;
+    padding-left: 40px;
+  }
+  .customer {
+    padding: 10px 15px; /* 여백을 적절히 줄임 */
+  }
+  .input {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+   .help .btn,
+  .btn.btn_custom {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .right-col  {
+    display: block;
+    width: 100%;
     height: auto;
+    margin: 0 auto;
   }
-}
-
-/* 더 큰 화면에서 스타일 적용 (태블릿 및 데스크탑) */
-@media (min-width: 769px) {
+  .left-col  {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .section {
+    width: 100%;
+    margin: 0; /* 좌우 여백 제거 */
+    padding: 50px 0;  /* 모바일에 적합한 패딩 (필요에 따라 조정) */
+  }
+  /* 추가: 좌측/우측 컬럼에 여백을 줄여서 공간 효율성 높이기 */
+  .left-col, .right-col {
+    padding: 0; /* 불필요한 여백 제거 */
+  }
   .customer .input {
-    flex-direction: row; /* 가로 정렬 */
+    display: flex;
+    flex-direction: column; /* 좌우로 컬럼 배치 */
+    justify-content: space-between;
   }
 
-  .right-col img.img-fluid {
-    width: 350px;
-    height: 300px;
-  }
+  
 }
+
+
+
+
