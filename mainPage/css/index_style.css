@@ -49,7 +49,7 @@ p,a,h1,h2,h3,h4,h5,h6{font-family: Pretendard; line-height: 1.3;}
 
 
 /* navigation bar */
-.toss_nav{width: 100%; height: 60px; position: fixed; display: flex; align-items: center; justify-content: center; background: white; z-index: 999; position: relative;}
+.toss_nav{width: 100%; height: 60px; position: fixed !important; display: flex; align-items: center; justify-content: center; background: white; z-index: 999; position: relative;}
 .toss_navmenu{width: 90%; margin: auto; height: 100%;  max-width: 1140px;}
 .toss_navmenu_inner{display: flex; justify-content: center; align-items: center; width: 92%; height: 100%; max-width: calc(100% - 48px); margin: 0 auto; }
 
