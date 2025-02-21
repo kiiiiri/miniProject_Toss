@@ -13,47 +13,6 @@
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.min.js"></script>
   <link href="css/style.css" rel="stylesheet">
   <script src="js/index.js"></script>
-  <script>
-    // footer 가져오기
-    document.addEventListener('DOMContentLoaded', function() {
-  fetch('/footer/index.html') // 외부 footer 파일 경로
-    .then(response => response.text()) // 파일을 텍스트로 변환
-    .then(data => {
-      // 불러온 데이터가 footer_container에 삽입
-      const footerContainer = document.getElementById('footer_container');
-      if (footerContainer) {
-        footerContainer.innerHTML = data;
-      } else {
-        console.error('footer_container 요소를 찾을 수 없습니다.');
-      }
-    })
-    .catch(error => console.error('Error loading footer:', error));
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  const toggleButton = document.querySelector('.toggle-top');
-  const categoryList = document.querySelector('.category-list');
-
-  // 토글 버튼 클릭 시 카테고리 리스트 보이기/숨기기
-  toggleButton.addEventListener('click', function(e) {
-    e.stopPropagation(); // 이벤트 전파 막기
-    categoryList.classList.toggle('show'); // show 클래스 토글
-  });
-
-  // 다른 곳을 클릭하면 카테고리 리스트가 사라지도록
-  document.addEventListener('click', function(e) {
-    if (!categoryList.contains(e.target) && !toggleButton.contains(e.target)) {
-      categoryList.classList.remove('show');
-    }
-  });
-
-  // 카테고리 리스트 내부에서 클릭하면, 해당 항목을 클릭한 것으로 간주하여 리스트 숨기기
-  categoryList.addEventListener('click', function() {
-    categoryList.classList.remove('show');
-  });
-});
-
-  </script>
 </head>
 <body>
   <nav class="navbar navbar-default navbar-fixed-top">
