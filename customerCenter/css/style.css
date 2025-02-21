@@ -232,7 +232,7 @@ nav img {
   top: 6%;
   object-fit: cover;
   object-position: top;
-  width: 100%; /* 원하는 이미지 너비로 조정 */
+  width: 300px; /* 원하는 이미지 너비로 조정 */
   height: auto;
 }
 
