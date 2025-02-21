@@ -22,29 +22,22 @@ $(document).ready(async function() {
     let pageNumber = $(this).text();
     curPageNumber = pageNumber;
 
-    $(".pagination li").removeClass("active");
-    $(this).parent().addClass("active");
-
-    updatePaginationArrowButton();
-    applyContentData(pageNumber);
-    calculatePaginationRange();
+    applyChangedProperty();
   })
 
   $(".prev_btn").on("click", function() {
     clearNoticeList()
-    applyContentData(--curPageNumber);
-    updatePaginationArrowButton();
-    addActiveClassInList();
-    calculatePaginationRange();
+
+    --curPageNumber;
+    applyChangedProperty();
     $(this).blur();
   })
 
   $(".next_btn").on("click", function() {
     clearNoticeList()
-    applyContentData(++curPageNumber);
-    updatePaginationArrowButton();
-    addActiveClassInList();
-    calculatePaginationRange();
+
+    ++curPageNumber;
+    applyChangedProperty();
     $(this).blur();
   })
 
@@ -60,7 +53,7 @@ $(document).ready(async function() {
         $(".pagination").append(`
           <li><button class="btn page_btn" id="page${totalPages}">${totalPages}</button></li>
           <li class="next"><button class="btn next_btn">></button></li>`)
-        converterPageBtnToThreeDot(8);
+        abbreviatePageBtn(1);
         break;
       }
 
@@ -82,8 +75,8 @@ $(document).ready(async function() {
     $(".notice-list").empty();
   }
 
-  function applyContentData(pageNumber) {
-    let pageKey = `page${pageNumber}`;
+  function applyContentData() {
+    let pageKey = `page${curPageNumber}`;
 
     $.each(jsonData[pageKey].contents, function(index, content) {
       if (index == 9) {
@@ -136,8 +129,7 @@ $(document).ready(async function() {
         pageBtn.attr("id", "page" + (firstPage + i));
       }
 
-      converterPageBtnToThreeDot(8,(totalPages - 1));
-      converterThreeDotToPageBtn(2,2)
+      abbreviatePageBtn(1);
 
       return;
     } else if (totalPages - curPageNumber < centerOfPageBtn - 1) {
@@ -147,8 +139,7 @@ $(document).ready(async function() {
         pageBtn.attr("id", "page" + (totalPages - i));
       }
 
-      converterPageBtnToThreeDot(2,2);
-      converterThreeDotToPageBtn(8,(totalPages - 1))
+      abbreviatePageBtn(2);
 
       return;
     }
@@ -162,10 +153,16 @@ $(document).ready(async function() {
       pageBtn.attr("id", "page" + (startPageNumber + i));
     }
 
-    converterPageBtnToThreeDot(2);
-    converterPageBtnToThreeDot(8);
+    abbreviatePageBtn(3);
 
     addActiveClassInList();
+  }
+
+  function applyChangedProperty() {
+    applyContentData();
+    updatePaginationArrowButton();
+    addActiveClassInList();
+    calculatePaginationRange();
   }
 
   function addActiveClassInList() {
@@ -173,15 +170,31 @@ $(document).ready(async function() {
     $("#page"+curPageNumber).parent().addClass("active");
   }
 
-  function converterPageBtnToThreeDot(index) {
-    $(".pagination").children().eq(index).children().text("...");
-    $(".pagination").children().eq(index).children().addClass("disabled");
-  }
+  function abbreviatePageBtn(mode) {
+    let pageBtns = [];
+    let minAbbrBtnIndex = 2;
+    let maxAbbrBtnIndex = 8;
+  
+    if (mode == 1) {
+      pageBtns.push($(".pagination").children().eq(maxAbbrBtnIndex).children());
 
-  function converterThreeDotToPageBtn(index, pageNumber) {
-    $(".pagination").children().eq(index).children().text(pageNumber);
-    $(".pagination").children().eq(index).children().removeClass("disabled");
-  }
+      $(".pagination").children().eq(minAbbrBtnIndex).children().text(minAbbrBtnIndex);
+      $(".pagination").children().eq(minAbbrBtnIndex).children().removeClass("disabled");
+    } else if (mode == 2) {
+      pageBtns.push($(".pagination").children().eq(minAbbrBtnIndex).children());
+      
+      $(".pagination").children().eq(maxAbbrBtnIndex).children().text(totalPages - 1);
+      $(".pagination").children().eq(maxAbbrBtnIndex).children().removeClass("disabled");
+    } else if (mode == 3) {
+      pageBtns.push($(".pagination").children().eq(minAbbrBtnIndex).children());
+      pageBtns.push($(".pagination").children().eq(maxAbbrBtnIndex).children());
+    }
+  
+    pageBtns.forEach((pageBtn) => {
+      pageBtn.text("...");
+      pageBtn.addClass("disabled");
+    });
+  }  
 });
 
     // footer 가져오기
