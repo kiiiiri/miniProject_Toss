@@ -124,3 +124,14 @@ window.addEventListener('resize', () => {
         tossMenuM.style.display = 'none'; // 화면 크기가 768px 이상일 때는 메뉴 숨김
     }
 });
+
+// scrollButton 클릭 시 targetSection으로 부드럽게 스크롤 이동
+document.getElementById('scrollButton').addEventListener('click', function() {
+    // 'targetSection'으로 부드럽게 스크롤 이동
+    const targetSection = document.getElementById('targetSection'); // 이동할 대상
+    targetSection.scrollIntoView(
+      {
+     behavior: 'smooth' // 부드럽게 스크롤
+}
+);
+});

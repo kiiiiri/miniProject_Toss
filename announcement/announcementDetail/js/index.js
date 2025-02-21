@@ -8,4 +8,4 @@ $(document).ready(function() {
     console.error("URL 파라메터 처리 중 오류 발생 : ",error);
     alert("데이터를 가져오는 중 오류가 발생했습니다. 나중에 다시 시도하세요.");
   }
-})
+});
