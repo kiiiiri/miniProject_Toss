@@ -341,6 +341,90 @@ nav img {
 }
 /* 반응형 적용 */
 
+/* 태블릿 화면에서의 스타일 */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .input {
+    width: 100%; /* input의 너비를 100%로 설정하여 화면에 꽉 채우기 */
+    flex-direction: column !important;
+  }
+  
+  /* 오른쪽 이미지 컬럼 */
+  .right-col img {
+    width: 100%;  /* 이미지를 화면에 맞게 확장 */
+    height: auto;
+    margin: 0 auto;  /* 중앙 정렬 */
+  }
+  
+  /* 상담센터의 입력란(좌측/우측 컬럼) */
+  .customer .input {
+    display: flex;
+    align-items: center; /* 중앙 정렬 */
+  }
+
+  .contact_info {
+    min-width: 100%; /* 화면 크기에 맞게 최소 너비를 100%로 설정 */
+    margin: 20px 0; /* 상하 여백 추가 */
+    flex-direction: row; /* 세로 정렬로 변경 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+  }
+
+  /* 버튼을 모바일에 맞게 100%로 설정 */
+  .help .button-container {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .help .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .first-row .btn.btn_custom,
+  .second-row .btn.btn_custom {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* 검색창 스타일 */
+  .help .search-box-container {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .help .search-box-container:hover,
+  .help .search-box-container.focused {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+
+  .help .search-box {
+    width: 100%;
+    padding-left: 40px;
+  }
+
+  /* 고객센터 전화번호 영역 조정 */
+  .customer .input {
+    width: 100%;
+    padding: 0 15px; /* 패딩을 추가하여 좌우 여백을 줄임 */
+  }
+
+  /* 전체적으로 좌우 여백 조정 */
+  .section {
+    padding: 50px 15px; /* 모바일에서 더 좁은 여백 설정 */
+  }
+
+  .left-col, .right-col {
+    width: 100%; /* 100% 너비로 설정하여 화면에 맞추기 */
+    margin: 0;
+    text-align: center;
+    padding: 0; /* 불필요한 패딩 제거 */
+  }
+}
+
 /* 작은 화면에서 레이아웃 변경 (모바일) */
 @media (max-width: 768px) {
   .section {
