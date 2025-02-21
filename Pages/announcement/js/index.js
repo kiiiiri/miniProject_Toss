@@ -2,7 +2,7 @@ $(document).ready(async function() {
   let jsonData = null;
 
   try {
-    let response = await fetch(`/miniProject_Toss/data/announce.json`);
+    let response = await fetch(`/SeungHun333/miniProject_Toss/data/announce.json`);
      jsonData = await response.json();
   } catch(error) {
     console.log("Json Data를 가져오는 중 오류 발생 : ", error);
