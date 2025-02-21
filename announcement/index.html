@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>공지사항</title>
+   <link rel="icon" href="img/favicon.png" sizes="32x32">
    <!-- Latest compiled and minified CSS -->
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
    <!-- jQuery library -->
@@ -17,21 +18,6 @@
    <link href="css/style.css" rel="stylesheet">
    <script src="js/index.js"></script>
    <script>
-    // footer 가져오기
-    document.addEventListener('DOMContentLoaded', function() {
-    fetch('../footer/index.html') // 외부 footer 파일 경로
-    .then(response => response.text()) // 파일을 텍스트로 변환
-    .then(data => {
-      // 불러온 데이터가 footer_container에 삽입
-      const footerContainer = document.getElementById('footer_container');
-        if (footerContainer) {
-          footerContainer.innerHTML = data;
-        } else {
-          console.error('footer_container 요소를 찾을 수 없습니다.');
-        }
-      })
-      .catch(error => console.error('Error loading footer:', error));
-    });
   </script>  
 </head>
 <body>
@@ -47,12 +33,11 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#about">회사소개</a></li>
-          <li><a href="#portfolio">공지사항</a></li>
-          <li><a href="#contact">고객센터</a></li>
-          <li><a href="#about">자주 묻는 질문</a></li>
-          <li><a href="#portfolio">공동 인증서 관리</a></li>
-          <li><a href="#contact">채용</a></li>
+          <li><a href="#">공지사항</a></li>
+          <li><a href="/customerCenter/index.html" target="_blank">고객센터</a></li>
+          <li><a href="/q&a/index.html" target="_blank">자주 묻는 질문</a></li>
+          <li><a href="#">공동 인증서 관리</a></li>
+          <li><a href="#">채용</a></li>
         </ul>
       </div>
     </div>

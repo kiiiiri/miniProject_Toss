@@ -1,9 +1,5 @@
 $(document).ready(async function() {
-  let curPageNumber = 1;
-  let maxPageBtnLength = 9;
   let jsonData = null;
-  let totalPages = 0;
-  
 
   try {
     let response = await fetch("/data/announce.json"); 
@@ -13,6 +9,10 @@ $(document).ready(async function() {
     alert("데이터를 가져오는 중 오류가 발생했습니다. 나중에 다시 시도하세요.");
     return;
   }
+
+  let curPageNumber = 1;
+  let maxPageBtnLength = 9;
+  let totalPages = 0;
 
   init();
 
@@ -25,7 +25,7 @@ $(document).ready(async function() {
     $(".pagination li").removeClass("active");
     $(this).parent().addClass("active");
 
-    updatePaginationArrowButton(pageNumber);
+    updatePaginationArrowButton();
     applyContentData(pageNumber);
     calculatePaginationRange();
   })
@@ -45,19 +45,18 @@ $(document).ready(async function() {
     updatePaginationArrowButton();
     addActiveClassInList();
     calculatePaginationRange();
-    console.log(curPageNumber);
     $(this).blur();
   })
 
   function init() {
-    let firstPage = 1;
+    let firstPageBtnindex = 1;
     clearNoticeList()
 
     let pageKeys = Object.keys(jsonData).filter(key => key.startsWith("page"));
     totalPages = pageKeys.length;
 
     for (let i = 1; i <= totalPages; i++) {
-      if (i == maxPageBtnLength) {
+      if (i >= maxPageBtnLength) {
         $(".pagination").append(`
           <li><button class="btn page_btn" id="page${totalPages}">${totalPages}</button></li>
           <li class="next"><button class="btn next_btn">></button></li>`)
@@ -65,18 +64,18 @@ $(document).ready(async function() {
         break;
       }
 
-      if (i === firstPage) {
+      if (i === firstPageBtnindex) {
         $(".pagination").append(`<li class="prev"><button class="btn prev_btn"><</button></li>`)
       }
 
-      $(".pagination").append(`<li class=${i === firstPage ? 'active' : ''}><button class="btn page_btn" id="page${i}">${i}</button></li>`)
+      $(".pagination").append(`<li class=${i === firstPageBtnindex ? 'active' : ''}><button class="btn page_btn" id="page${i}">${i}</button></li>`)
 
       if (i === totalPages) {
         $(".pagination").append(`<li class="next"><button class="btn next_btn">></button></li>`)
       }
     }
 
-    applyContentData(firstPage);
+    applyContentData(firstPageBtnindex);
   }
 
   function clearNoticeList() {
@@ -185,3 +184,18 @@ $(document).ready(async function() {
   }
 });
 
+    // footer 가져오기
+document.addEventListener('DOMContentLoaded', function() {
+  fetch('../footer/index.html') // 외부 footer 파일 경로
+  .then(response => response.text()) // 파일을 텍스트로 변환
+  .then(data => {
+    // 불러온 데이터가 footer_container에 삽입
+    const footerContainer = document.getElementById('footer_container');
+      if (footerContainer) {
+        footerContainer.innerHTML = data;
+      } else {
+        console.error('footer_container 요소를 찾을 수 없습니다.');
+      }
+    })
+    .catch(error => console.error('Error loading footer:', error));
+});
