@@ -228,7 +228,7 @@ nav img {
 }
  /* 우측 컬럼: 이미지  */
 .right-col img.img-fluid {
-   right: 10%;
+  right: 10%;
   top: 6%;
   object-fit: cover;
   object-position: top;
