@@ -5,12 +5,9 @@
 
 .navbar {
   border: none !important;
-  background-color: white !important;
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: bulr(10px);
   box-shadow: none !important;
-}
-
-nav > .container {
-  background-color: white;
 }
 
 nav img {
@@ -25,14 +22,22 @@ nav img {
 }
 
 .navbar-toggle {
-  display: block !important;
+  margin-top: 16px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #2b2b2b !important;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 400;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
   background-color: #e7e7e7;
   border-radius: 10px;
   border-collapse: 10px;
-  color: white;
 }
 
 #mainTitle {
@@ -81,17 +86,28 @@ nav img {
   outline: none;
 }
 
-.custom-pagination .btn:active,
-.custom-pagination .btn:focus {
-  background-color:#dddddd;
-  border: none;
-  outline: none;
-  border-radius: 50%;
-}
-
 .pagination .active .btn{
   border-radius: 50%;
   background-color:#dddddd;
+}
+
+.page_btn {
+  min-width: 40px;
+  min-height: 40px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #4f4e4e;
+}
+
+.prev_btn, .next_btn {
+  font-weight: 500;
+}
+
+.page_btn:active {
+  background-color:white;
+  border: none;
+  outline: none;
+  border-radius: 50%;
 }
 
 .prev_btn:focus,
@@ -125,6 +141,11 @@ button.disabled {
   }
 }
 
+@media (max-width: 768px) {
+  .navbar {
+    background-color: white !important; 
+  }
+}
 
 
 

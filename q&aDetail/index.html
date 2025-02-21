@@ -1,12 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="css/style.css" rel="stylesheet"> 
+  <title>토스 고객센터</title>
+  <link rel="icon" href="img/favicon.png" sizes="32x32">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.min.js"></script>
+  <link href="css/style.css" rel="stylesheet">
+  <script src="js/index.js"></script>
+  <script>
+    // footer 가져오기
+    document.addEventListener('DOMContentLoaded', function() {
+  fetch('/footer/index.html') // 외부 footer 파일 경로
+    .then(response => response.text()) // 파일을 텍스트로 변환
+    .then(data => {
+      // 불러온 데이터가 footer_container에 삽입
+      const footerContainer = document.getElementById('footer_container');
+      if (footerContainer) {
+        footerContainer.innerHTML = data;
+      } else {
+        console.error('footer_container 요소를 찾을 수 없습니다.');
+      }
+    })
+    .catch(error => console.error('Error loading footer:', error));
+});
+
+  </script> 
 </head>
 <body>
-  <div class="css-kjl5ev"><a class="reset-button radius--s typography--p typography--medium p-text-button p-text-button--grey p-text-button--underline css-56293c" href="/faq?category=0&amp;page=1">← 질문 목록</a><h1 class="css-1rpld2x edhjjyh1">티몬/위메프 결제 취소 접수 방법이 궁금해요.</h1><div class="css-14tqdn1 ekmu8v00"><span class="tds-pc badge badge--medium radius--m css-8hx5ns" style="background-color: rgba(78, 89, 104, 0.16); color: rgb(78, 89, 104);">티몬</span><span class="tds-pc badge badge--medium radius--m css-8hx5ns" style="background-color: rgba(78, 89, 104, 0.16); color: rgb(78, 89, 104);">위메프</span><span class="tds-pc badge badge--medium radius--m css-8hx5ns" style="background-color: rgba(78, 89, 104, 0.16); color: rgb(78, 89, 104);">토스페이</span></div><article class="p-post text--left p-post--list-default p-post--list-space-default css-l68ndi edhjjyh0"><p>티몬/위메프 가맹점에서 토스를 통한 결제 후 환불 접수가 필요하시다면 고객님의 결제 수단 확인 후 환불 접수가 필요해요.<br><strong>※결제 수단에 따라 접수 방법이 다르기 때문에 접수 전 꼭 확인해 주세요.</strong><br><br><br></p><p><strong>카드 결제</strong></p><ul><li><a href="https://toss.im/_m/lTr7D1u" rel="noopener noreferrer" target="_blank"><strong>접수 링크</strong></a>를 통해 고객님의 결제 내역이 확인된다면 접수를 완료해 주세요.</li><li>토스뱅크 체크카드 결제는 토스뱅크 고객센터로 문의해 주세요.</li></ul><p><br><br></p><p><strong>계좌 결제</strong></p><ul class="p-rich_text_list p-rich_text_list__bullet" data-border="0" data-indent="1" data-stringify-type="unordered-list"><li data-stringify-border="0" data-stringify-indent="1">토스뱅크 계좌에서 간편결제(ex.네이버페이,카카오페이 등)를 통해 결제했다면 각 페이사 고객센터로 문의가 필요해요.</li><li data-stringify-border="0" data-stringify-indent="1"><a href="https://toss.im/_m/lTr7D1u" rel="noopener noreferrer" target="_blank"><strong>접수 링크</strong></a>를 통해 고객님의 결제 내역이 확인된다면 접수를 완료해 주세요.</li><li data-stringify-border="0" data-stringify-indent="1">계좌 결제를 진행했지만 위 링크에서 결제 내역이 확인되지 않는다면 <a href="https://builder.tosspayments.com/to/c8c3709ae6d847ba977d302c49eb0801" rel="noopener noreferrer" target="_blank"><strong>토스페이먼츠 홈페이지</strong></a>에서 결제 건 확인 후 접수할 수 있어요.<br><br></li></ul><p><strong>Q. 같은 계좌 결제인데 접수 경로가 상이한 이유가 궁금해요.</strong><br>A. "토스페이" 간편결제와 "토스페이먼츠PG" 결제는 결제 수단이 상이해요.<br><br>토스페이는 토스 앱에 등록된 결제 수단을 통해 앱 결제를 진행하지만, 토스페이먼츠는 결제대행사이기 때문에 토스페이먼츠라는 PG사를 거쳐 결제가 진행돼요.<br>즉, 최종 결제 방법이 다르기 때문에 같은 계좌 결제이지만 환불 접수 경로가 상이해요.<br><br><a href="https://blog.toss.im/article/tosspayments-pay" rel="noopener noreferrer" target="_blank"><strong>토스페이먼츠 서비스 확인하기</strong></a></p></article></div>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="#" class="logo"><img src="img/logo2.png" alt="아이콘"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#about">자주묻는질문</a></li>
+          <li><a href="#portfolio">공지사항</a></li>
+          <li><a href="#contact">고객센터</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid first_box_parent">
+    <div class="container first_box">
+      <h1>자주 묻는 질문</h1>
+      <div class="search-box-container">
+        <i class="fa fa-search search-icon"></i>
+        <input type="text" class="search-box" placeholder="무엇이든 찾아보세요">
+      </div>
+  
+      <div class="list_parent">
+        <div class="category-list list-group">
+          <div class="category list-group-item" style="color:rgb(100, 100, 228)">질문 TOP</div>
+          <div class="category list-group-item">송금</div>
+          <div class="category list-group-item">계좌</div>
+          <div class="category list-group-item">카드</div>
+          <div class="category list-group-item">토스쇼핑</div>
+          <div class="category list-group-item">결제</div>
+          <div class="category list-group-item">주식</div>
+          <div class="category list-group-item">미성년</div>
+          <div class="category list-group-item">이용 문의</div>
+          <div class="category list-group-item">안심보상제</div>
+          <div class="category list-group-item">대출</div>
+          <div class="category list-group-item">토스 프리엄</div>
+          <div class="category list-group-item">토스 모바일</div>
+          <div class="category list-group-item">알림</div>
+          <div class="category list-group-item">자료실</div>
+        </div>
+    
+        <div class="list_box">
+          <ul class="list">
+          </ul>
+
+          <ul class="pagination custom-pagination">
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+
+<div class="contact-section" style="background:#EEF6F3;">
+    <div class="container">
+      <div class="help_text">
+        <h2 style="font-size: 30px;">문제가 아직 해결되지 않았다면<br> 언제든 연락해주세요.</h2>
+        <p class="text-muted">24시간 고객센터</p>
+        <div class="d-flex justify-content-center justify-content-md-start gap-4">
+          <div>
+            <span class="d-block text-muted">피해·사기 상담</span>
+            <strong class="fs-4">1661-4905</strong>
+          </div>
+          <div class="border-start ps-4">
+            <span class="d-block text-muted">일반 상담</span>
+            <strong class="fs-4">1599-4905</strong>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 오른쪽 이미지 영역 -->
+      <div class="help_img">
+        <img src="img/hand-phone-call-icon.png" alt="고객센터 문의" class="img-fluid" style="max-height: 200px;">
+      </div>
+    </div>
+  </div>
+
+  <div id="footer_container"></div>
 </body>
 </html>
