@@ -96,7 +96,7 @@ $(document).ready(async function() {
 
     // footer 가져오기
     document.addEventListener('DOMContentLoaded', function() {
-      fetch('/footer/index.html') // 외부 footer 파일 경로
+      fetch('../footer/index.html') // 외부 footer 파일 경로
         .then(response => response.text()) // 파일을 텍스트로 변환
         .then(data => {
           // 불러온 데이터가 footer_container에 삽입
